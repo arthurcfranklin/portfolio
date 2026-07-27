@@ -1,10 +1,4 @@
-import {
-  BookOpen,
-  Briefcase,
-  FolderGit2,
-  MonitorCog,
-  Trophy,
-} from "lucide-react";
+import { BookOpen, Briefcase, FolderGit2, MonitorCog, Trophy } from "lucide-react";
 
 import type { StatItem, TimelineItem } from "@/types/content";
 

@@ -13,15 +13,14 @@ export function SkillsSection() {
           <SectionLabel>Competências Técnicas</SectionLabel>
 
           <h2 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight">
-            Ferramentas, tecnologias e{" "}
-            <span className="text-violet-gradient">conhecimentos</span>{" "}
+            Ferramentas, tecnologias e <span className="text-violet-gradient">conhecimentos</span>{" "}
             aplicados no dia a dia.
           </h2>
 
           <p className="mt-5 text-muted-foreground text-lg">
-            Utilizo um conjunto de tecnologias, plataformas e práticas voltadas
-            à infraestrutura, monitoramento, virtualização e automação,
-            priorizando confiabilidade, observabilidade e eficiência operacional.
+            Utilizo um conjunto de tecnologias, plataformas e práticas voltadas à infraestrutura,
+            monitoramento, virtualização e automação, priorizando confiabilidade, observabilidade e
+            eficiência operacional.
           </p>
         </div>
 

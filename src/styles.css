@@ -67,7 +67,6 @@
   --destructive: oklch(0.55 0.18 27);
   --destructive-foreground: oklch(1 0 0);
 
-
   --border: oklch(1 0 0 / 10%);
   --border-subtle: oklch(1 0 0 / 6%);
   --input: oklch(1 0 0 / 10%);
@@ -114,14 +113,23 @@
     transform: translateX(-50%);
     width: min(1100px, 90%);
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 100%
+    );
     pointer-events: none;
   }
 
   main > section:nth-of-type(even) {
-    background: linear-gradient(180deg, rgba(255,255,255,0.012) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.012) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.012) 0%,
+      rgba(255, 255, 255, 0.02) 50%,
+      rgba(255, 255, 255, 0.012) 100%
+    );
   }
-
 }
 
 @utility container-pro {
@@ -134,12 +142,11 @@
 @utility bg-page {
   background-color: #000;
   background-image:
-    radial-gradient(ellipse 70% 50% at 50% -10%, rgba(180, 190, 210, 0.10), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% -10%, rgba(180, 190, 210, 0.1), transparent 60%),
     radial-gradient(ellipse 50% 40% at 90% 20%, rgba(160, 170, 190, 0.05), transparent 70%),
     radial-gradient(ellipse 60% 40% at 10% 40%, rgba(140, 150, 170, 0.04), transparent 70%),
     linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
 }
-
 
 @utility portrait-ring {
   position: relative;
@@ -148,7 +155,13 @@
     position: absolute;
     inset: -10%;
     border-radius: 9999px;
-    background: conic-gradient(from 180deg, rgba(99,102,241,0.0), rgba(99,102,241,0.55), rgba(139,92,246,0.4), rgba(99,102,241,0.0));
+    background: conic-gradient(
+      from 180deg,
+      rgba(99, 102, 241, 0),
+      rgba(99, 102, 241, 0.55),
+      rgba(139, 92, 246, 0.4),
+      rgba(99, 102, 241, 0)
+    );
     filter: blur(28px);
     z-index: 0;
   }
@@ -157,12 +170,13 @@
     position: absolute;
     inset: 0;
     border-radius: 9999px;
-    border: 1px solid rgba(99,102,241,0.45);
-    box-shadow: 0 0 60px rgba(99,102,241,0.35), inset 0 0 60px rgba(99,102,241,0.15);
+    border: 1px solid rgba(99, 102, 241, 0.45);
+    box-shadow:
+      0 0 60px rgba(99, 102, 241, 0.35),
+      inset 0 0 60px rgba(99, 102, 241, 0.15);
     pointer-events: none;
   }
 }
-
 
 @utility card-pro {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
@@ -172,7 +186,11 @@
     0 1px 0 rgba(255, 255, 255, 0.04) inset,
     0 20px 40px -24px rgba(0, 0, 0, 0.8),
     0 2px 6px -2px rgba(0, 0, 0, 0.6);
-  transition: border-color 200ms ease, transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease,
+    background 200ms ease,
+    box-shadow 200ms ease;
 }
 
 @utility card-pro-hover {
@@ -200,7 +218,6 @@
   color: transparent;
 }
 
-
 @utility btn-primary {
   display: inline-flex;
   align-items: center;
@@ -214,16 +231,16 @@
   font-weight: 500;
   font-size: 0.9375rem;
   transition: all 200ms ease;
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 8px 24px -8px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
   &:hover {
     background: linear-gradient(180deg, #34343a, #1a1a1e);
-    border-color: rgba(255,255,255,0.22);
+    border-color: rgba(255, 255, 255, 0.22);
     transform: translateY(-1px);
   }
 }
-
-
 
 @utility btn-secondary {
   display: inline-flex;
@@ -263,8 +280,14 @@
 }
 
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @utility animate-fade-up {

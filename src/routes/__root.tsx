@@ -74,7 +74,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Arthur Franklin — Auxiliar de TI | Infraestrutura | Suporte Técnico" },
-      { name: "description", content: "Auxiliar de TI focado em infraestrutura, suporte técnico e monitoramento. Soluções confiáveis para ambientes corporativos." },
+      {
+        name: "description",
+        content:
+          "Auxiliar de TI focado em infraestrutura, suporte técnico e monitoramento. Soluções confiáveis para ambientes corporativos.",
+      },
       { name: "author", content: "Arthur Franklin" },
       { property: "og:title", content: "Arthur Franklin — Auxiliar de TI" },
       { property: "og:description", content: "Infraestrutura, Suporte Técnico e Operações de TI." },
@@ -86,7 +90,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+      },
     ],
   }),
 

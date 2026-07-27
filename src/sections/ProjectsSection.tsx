@@ -16,8 +16,7 @@ export function ProjectsSection() {
             <SectionLabel>Projetos em Destaque</SectionLabel>
 
             <h2 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight">
-              Soluções reais para{" "}
-              <span className="text-violet-gradient">problemas reais</span>.
+              Soluções reais para <span className="text-violet-gradient">problemas reais</span>.
             </h2>
           </div>
 
@@ -34,10 +33,7 @@ export function ProjectsSection() {
 
         <div className="mt-14 grid lg:grid-cols-3 gap-5">
           {projects.map((project) => (
-            <ProjectCard
-              key={project.name}
-              project={project}
-            />
+            <ProjectCard key={project.name} project={project} />
           ))}
         </div>
       </div>

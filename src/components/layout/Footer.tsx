@@ -1,13 +1,4 @@
-import {
-  ArrowUp,
-  FolderGit2,
-  Github,
-  Globe,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { ArrowUp, FolderGit2, Github, Globe, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 import { navigation } from "@/data/navigation";
 
@@ -25,8 +16,7 @@ export function Footer() {
             </a>
 
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Soluções voltadas a suporte técnico, infraestrutura, monitoramento
-              e automação.
+              Soluções voltadas a suporte técnico, infraestrutura, monitoramento e automação.
             </p>
           </div>
 
@@ -122,10 +112,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <span>
-            © {new Date().getFullYear()} Arthur Franklin. Todos os direitos
-            reservados.
-          </span>
+          <span>© {new Date().getFullYear()} Arthur Franklin. Todos os direitos reservados.</span>
 
           <div className="flex items-center gap-5">
             <span>Desenvolvido com foco em desempenho, design e propósito.</span>

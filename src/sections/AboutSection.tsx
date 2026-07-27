@@ -16,29 +16,27 @@ export function AboutSection() {
             <SectionLabel>Sobre Mim</SectionLabel>
 
             <h2 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight">
-              Entusiasta por{" "}
-              <span className="text-violet-gradient">tecnologia</span>{" "}
-              e infraestrutura.
+              Entusiasta por <span className="text-violet-gradient">tecnologia</span> e
+              infraestrutura.
             </h2>
 
             <div className="mt-7 space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               <p>
-                Minha trajetória em Tecnologia da Informação foi construída pela
-                curiosidade e pela vontade de entender como a tecnologia resolve
-                problemas reais. Foi assim que encontrei no suporte técnico e na
-                infraestrutura um ambiente de aprendizado e evolução contínua.
+                Minha trajetória em Tecnologia da Informação foi construída pela curiosidade e pela
+                vontade de entender como a tecnologia resolve problemas reais. Foi assim que
+                encontrei no suporte técnico e na infraestrutura um ambiente de aprendizado e
+                evolução contínua.
               </p>
               <p>
-                Hoje atuo na operação de ambientes de tecnologia e transformo
-                desafios do dia a dia em oportunidades para criar ferramentas,
-                automações e processos mais eficientes.
+                Hoje atuo na operação de ambientes de tecnologia e transformo desafios do dia a dia
+                em oportunidades para criar ferramentas, automações e processos mais eficientes.
               </p>
             </div>
 
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {stats.map((stat) => (
-              <StatCard key={stat.v} stat={stat} />
-            ))}
+              {stats.map((stat) => (
+                <StatCard key={stat.v} stat={stat} />
+              ))}
             </div>
           </div>
 
@@ -61,9 +59,7 @@ export function AboutSection() {
                     {item.years}
                   </div>
 
-                  <h4 className="mt-2 text-base font-semibold leading-snug">
-                    {item.title}
-                  </h4>
+                  <h4 className="mt-2 text-base font-semibold leading-snug">{item.title}</h4>
 
                   {item.subtitle && (
                     <p className="mt-1 text-sm text-muted-foreground font-medium">
@@ -77,9 +73,7 @@ export function AboutSection() {
                     </p>
                   )}
 
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    {item.desc}
-                  </p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </li>
               ))}
             </ol>

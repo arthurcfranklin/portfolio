@@ -1,17 +1,8 @@
-import {
-  ArrowRight,
-  FolderGit2,
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { ArrowRight, FolderGit2, Github, Linkedin, Mail } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section
-      id="top"
-      className="relative flex items-center min-h-[calc(100vh-4rem)] pt-16 pb-24"
-    >
+    <section id="top" className="relative flex items-center min-h-[calc(100vh-4rem)] pt-16 pb-24">
       <div className="container-pro w-full">
         <div className="animate-fade-up mx-auto max-w-5xl text-center flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold tracking-tight leading-[1.02]">
@@ -20,16 +11,14 @@ export function HeroSection() {
 
           <p className="mt-5 text-xl md:text-[1.55rem] text-foreground/85 font-medium">
             Suporte Técnico&nbsp;
-            <span className="text-muted-foreground">|</span>{" "}
-            Infraestrutura{" "}
+            <span className="text-muted-foreground">|</span> Infraestrutura{" "}
             <span className="text-muted-foreground">|</span>
             &nbsp;Automação
           </p>
 
           <p className="mt-8 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed">
-            Do atendimento ao usuário ao monitoramento de infraestrutura,
-            criando soluções para operações de tecnologia mais eficientes e
-            escaláveis.
+            Do atendimento ao usuário ao monitoramento de infraestrutura, criando soluções para
+            operações de tecnologia mais eficientes e escaláveis.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3 justify-center">

@@ -21,9 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <span className="chip">{project.tag}</span>
       </div>
 
-      <h3 className="mt-6 text-2xl font-bold tracking-tight">
-        {project.name}
-      </h3>
+      <h3 className="mt-6 text-2xl font-bold tracking-tight">{project.name}</h3>
 
       <p className="mt-3 text-muted-foreground text-sm leading-relaxed flex-1">
         {project.description}

@@ -5,9 +5,7 @@ type ContactCardProps = {
 };
 
 export function ContactCard({ contact }: ContactCardProps) {
-  const opensNewTab =
-    contact.href.startsWith("http") ||
-    contact.href.startsWith("mailto");
+  const opensNewTab = contact.href.startsWith("http") || contact.href.startsWith("mailto");
 
   return (
     <a
@@ -21,19 +19,11 @@ export function ContactCard({ contact }: ContactCardProps) {
       </span>
 
       <div className="flex-1 min-w-0">
-        <div className="text-xs text-muted-foreground">
-          {contact.label}
-        </div>
+        <div className="text-xs text-muted-foreground">{contact.label}</div>
 
-        <div className="text-sm font-medium truncate">
-          {contact.value}
-        </div>
+        <div className="text-sm font-medium truncate">{contact.value}</div>
 
-        {contact.action && (
-          <div className="text-xs text-accent mt-0.5">
-            {contact.action}
-          </div>
-        )}
+        {contact.action && <div className="text-xs text-accent mt-0.5">{contact.action}</div>}
       </div>
     </a>
   );

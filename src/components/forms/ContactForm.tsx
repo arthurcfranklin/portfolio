@@ -39,9 +39,7 @@ export function ContactForm() {
             required
             maxLength={100}
             value={form.name}
-            onChange={(event) =>
-              setForm({ ...form, name: event.target.value })
-            }
+            onChange={(event) => setForm({ ...form, name: event.target.value })}
             className="input-pro"
             placeholder="Seu nome completo"
           />
@@ -53,9 +51,7 @@ export function ContactForm() {
             type="email"
             maxLength={255}
             value={form.email}
-            onChange={(event) =>
-              setForm({ ...form, email: event.target.value })
-            }
+            onChange={(event) => setForm({ ...form, email: event.target.value })}
             className="input-pro"
             placeholder="seu.email@exemplo.com"
           />
@@ -65,9 +61,7 @@ export function ContactForm() {
           <input
             value={form.phone}
             maxLength={30}
-            onChange={(event) =>
-              setForm({ ...form, phone: event.target.value })
-            }
+            onChange={(event) => setForm({ ...form, phone: event.target.value })}
             className="input-pro"
             placeholder="(00) 00000-0000"
           />
@@ -78,9 +72,7 @@ export function ContactForm() {
             required
             maxLength={150}
             value={form.subject}
-            onChange={(event) =>
-              setForm({ ...form, subject: event.target.value })
-            }
+            onChange={(event) => setForm({ ...form, subject: event.target.value })}
             className="input-pro"
             placeholder="Qual é o assunto?"
           />
@@ -94,9 +86,7 @@ export function ContactForm() {
             rows={6}
             maxLength={2000}
             value={form.message}
-            onChange={(event) =>
-              setForm({ ...form, message: event.target.value })
-            }
+            onChange={(event) => setForm({ ...form, message: event.target.value })}
             className="input-pro resize-none"
             placeholder="Escreva sua mensagem aqui..."
           />
@@ -109,13 +99,9 @@ export function ContactForm() {
         </p>
 
         <button type="submit" className="btn-primary">
-          {status === "sent"
-            ? "Mensagem enviada ✓"
-            : "Enviar mensagem"}
+          {status === "sent" ? "Mensagem enviada ✓" : "Enviar mensagem"}
 
-          {status !== "sent" && (
-            <ArrowRight className="h-4 w-4" />
-          )}
+          {status !== "sent" && <ArrowRight className="h-4 w-4" />}
         </button>
       </div>
     </form>

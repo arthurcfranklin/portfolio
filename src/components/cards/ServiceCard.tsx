@@ -11,13 +11,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
         <service.icon className="h-5 w-5 text-accent" />
       </span>
 
-      <h3 className="mt-6 text-lg font-semibold">
-        {service.title}
-      </h3>
+      <h3 className="mt-6 text-lg font-semibold">{service.title}</h3>
 
-      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-        {service.desc}
-      </p>
+      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
     </div>
   );
 }
