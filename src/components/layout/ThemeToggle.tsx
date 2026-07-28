@@ -21,12 +21,7 @@ export function ThemeToggle() {
       disabled={!isHydrated}
       aria-label={isDarkTheme ? "Ativar tema claro" : "Ativar tema escuro"}
       title={isDarkTheme ? "Ativar tema claro" : "Ativar tema escuro"}
-      className="inline-flex h-9 w-10 shrink-0 items-center justify-center
-      rounded-md border border-white/10 bg-white/5
-      text-foreground transition-colors hover:border-accent/40
-      hover:bg-accent/10 hover:text-accent
-      disabled:cursor-not-allowed
-      disabled:opacity-60"
+      className="header-control w-10 shrink-0"
     >
       {isDarkTheme ? (
         <Sun aria-hidden="true" className="h-4 w-4 shrink-0" strokeWidth={2} />

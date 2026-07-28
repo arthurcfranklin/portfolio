@@ -9,7 +9,7 @@ export function Header() {
   const fullName = `${locale.hero.firstName} ${locale.hero.lastName}`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-black/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border-subtle bg-background/80 backdrop-blur-xl">
       <div
         className="
           grid h-16 w-full

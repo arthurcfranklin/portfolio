@@ -31,7 +31,7 @@ export function LanguageToggle() {
       disabled={!isHydrated}
       aria-label={`Alterar idioma para ${localeNames[nextLocale]}`}
       title={`Alterar idioma para ${localeNames[nextLocale]}`}
-      className="inline-flex h-9 min-w-10 items-center justify-center rounded-md border border-white/10 bg-white/5 px-2.5 text-xs font-semibold text-foreground transition-colors hover:border-accent/40 hover:bg-accent/10 hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
+      className="header-control min-w-10 px-2.5 text-xs font-semibold"
     >
       {localeCodes[language]}
     </button>

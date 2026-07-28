@@ -55,43 +55,47 @@ export function AboutSection() {
               <h3 className="text-xl font-semibold">{locale.about.academicTimelineTitle}</h3>
             </div>
 
-            <ol className="relative space-y-9 border-l border-white/10 pl-8">
-              {timeline.map((item) => {
-                const localeItem = locale.about.timeline[item.id];
+            <div className="relative">
+              <div className="absolute bottom-6 left-4 top-3 w-px bg-border" />
 
-                return (
-                  <li key={item.id} className="relative">
-                    <span className="absolute -left-[44px] top-0 inline-flex h-9 w-9 items-center justify-center rounded-full border border-accent/40 bg-black ring-4 ring-accent/10">
-                      <item.icon className="h-4 w-4 text-accent" />
-                    </span>
+              <ol className="space-y-8 pl-14">
+                {timeline.map((item) => {
+                  const localeItem = locale.about.timeline[item.id];
 
-                    <div className="font-mono text-xs uppercase tracking-widest text-accent">
-                      {localeItem.years}
-                    </div>
+                  return (
+                    <li key={item.id} className="relative">
+                      <span className="absolute -left-[58px] top-0 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface ring-4 ring-background transition-colors">
+                        <item.icon className="h-4 w-4 text-accent" />
+                      </span>
 
-                    <h4 className="mt-2 text-base font-semibold leading-snug">
-                      {localeItem.title}
-                    </h4>
+                      <div className="font-mono text-xs uppercase tracking-widest text-accent">
+                        {localeItem.years}
+                      </div>
 
-                    {localeItem.subtitle && (
-                      <p className="mt-1 text-sm font-medium text-muted-foreground">
-                        {localeItem.subtitle}
+                      <h4 className="mt-2 text-base font-semibold leading-snug">
+                        {localeItem.title}
+                      </h4>
+
+                      {localeItem.subtitle && (
+                        <p className="mt-1 text-sm font-medium text-muted-foreground">
+                          {localeItem.subtitle}
+                        </p>
+                      )}
+
+                      {localeItem.note && (
+                        <p className="mt-1 text-xs italic leading-snug text-muted-foreground/80">
+                          {localeItem.note}
+                        </p>
+                      )}
+
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {localeItem.description}
                       </p>
-                    )}
-
-                    {localeItem.note && (
-                      <p className="mt-1 text-xs italic leading-snug text-muted-foreground/80">
-                        {localeItem.note}
-                      </p>
-                    )}
-
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {localeItem.description}
-                    </p>
-                  </li>
-                );
-              })}
-            </ol>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
           </div>
         </div>
       </div>
