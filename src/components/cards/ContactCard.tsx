@@ -1,30 +1,44 @@
-import type { ContactItem } from "@/types/content";
+import type { LucideIcon } from "lucide-react";
 
 type ContactCardProps = {
-  contact: ContactItem;
+  label: string;
+  value: string;
+  action?: string;
+  icon: LucideIcon;
+  href: string | null;
 };
 
-export function ContactCard({ contact }: ContactCardProps) {
-  const opensNewTab = contact.href.startsWith("http") || contact.href.startsWith("mailto");
+export function ContactCard({ label, value, action, icon: Icon, href }: ContactCardProps) {
+  const content = (
+    <>
+      <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10">
+        <Icon className="h-5 w-5 text-accent" />
+      </span>
+
+      <div className="min-w-0 flex-1">
+        <div className="text-xs text-muted-foreground">{label}</div>
+
+        <div className="truncate text-sm font-medium">{value}</div>
+
+        {action && <div className="mt-0.5 text-xs text-accent">{action}</div>}
+      </div>
+    </>
+  );
+
+  if (!href) {
+    return <div className="card-pro flex items-center gap-4 p-5">{content}</div>;
+  }
+
+  const opensNewTab = href.startsWith("http");
 
   return (
     <a
-      href={contact.href}
+      href={href}
       target={opensNewTab ? "_blank" : undefined}
-      rel={opensNewTab ? "noreferrer" : undefined}
+      rel={opensNewTab ? "noopener noreferrer" : undefined}
       className="card-pro card-pro-hover flex items-center gap-4 p-5"
     >
-      <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 shrink-0">
-        <contact.icon className="h-5 w-5 text-accent" />
-      </span>
-
-      <div className="flex-1 min-w-0">
-        <div className="text-xs text-muted-foreground">{contact.label}</div>
-
-        <div className="text-sm font-medium truncate">{contact.value}</div>
-
-        {contact.action && <div className="text-xs text-accent mt-0.5">{contact.action}</div>}
-      </div>
+      {content}
     </a>
   );
 }

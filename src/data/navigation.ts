@@ -1,10 +1,28 @@
-import type { NavigationItem } from "@/types/content";
+import type { NavigationModel } from "@/types/models";
 
-export const navigation: NavigationItem[] = [
-  { label: "Início", href: "#top" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Competências", href: "#habilidades" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Áreas de Atuação", href: "#servicos" },
-  { label: "Contato", href: "#contato" },
+export const navigation: NavigationModel[] = [
+  {
+    id: "home",
+    href: "#top",
+  },
+  {
+    id: "about",
+    href: "#sobre",
+  },
+  {
+    id: "skills",
+    href: "#habilidades",
+  },
+  {
+    id: "projects",
+    href: "#projetos",
+  },
+  {
+    id: "services",
+    href: "#servicos",
+  },
+  {
+    id: "contact",
+    href: "#contato",
+  },
 ];

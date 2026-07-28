@@ -149,6 +149,7 @@ export const ptBR = {
     headingHighlight: "problemas reais",
     headingSuffix: ".",
     viewAllButton: "Ver todos os projetos",
+    viewProjectButton: "Ver Projeto",
     items: {
       forgedocs: {
         name: "ForgeDocs",
@@ -219,56 +220,64 @@ export const ptBR = {
     headingSuffix: "!",
     description:
       "Seja para uma oportunidade profissional, uma colaboração ou uma troca de experiências, estou sempre aberto a conversar.",
+
     items: {
       email: {
         label: "Email",
         value: "arthur@arthurfranklin.com.br",
         action: "Enviar email",
       },
+
       linkedin: {
         label: "LinkedIn",
         value: "arthurfranklin.com.br/linkedin",
         action: "Ver perfil",
       },
+
       location: {
         label: "Localização",
-        value: "Rio de Janeiro - RJ, Brasil",
-        action: "",
+        value: "Rio de Janeiro — RJ, Brasil",
       },
+
       phone: {
         label: "Telefone",
         value: "Disponível em breve",
-        action: "",
       },
     },
-  },
 
-  contactForm: {
-    fields: {
-      name: {
-        label: "Nome",
-        placeholder: "Seu nome completo",
+    form: {
+      fields: {
+        name: {
+          label: "Nome",
+          placeholder: "Seu nome completo",
+        },
+
+        email: {
+          label: "Email",
+          placeholder: "seu.email@exemplo.com",
+        },
+
+        phone: {
+          label: "Telefone",
+          placeholder: "(00) 00000-0000",
+        },
+
+        subject: {
+          label: "Assunto",
+          placeholder: "Qual é o assunto?",
+        },
+
+        message: {
+          label: "Mensagem",
+          placeholder: "Escreva sua mensagem aqui...",
+        },
       },
-      email: {
-        label: "Email",
-        placeholder: "seu.email@exemplo.com",
-      },
-      phone: {
-        label: "Telefone",
-        placeholder: "(00) 00000-0000",
-      },
-      subject: {
-        label: "Assunto",
-        placeholder: "Qual é o assunto?",
-      },
-      message: {
-        label: "Mensagem",
-        placeholder: "Escreva sua mensagem aqui...",
-      },
+
+      privacyNotice: "Seus dados serão usados apenas para responder a esta mensagem.",
+
+      submitButton: "Enviar mensagem",
+      successMessage: "Mensagem enviada ✓",
     },
-    privacyNotice: "Seus dados serão usados apenas para responder a esta mensagem.",
-    submitButton: "Enviar mensagem",
-    successMessage: "Mensagem enviada ✓",
   },
 
   footer: {

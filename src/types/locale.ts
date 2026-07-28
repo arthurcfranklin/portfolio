@@ -53,7 +53,35 @@ export type ServiceLocaleItem = {
 export type ContactLocaleItem = {
   label: string;
   value: string;
-  action: string;
+  action?: string;
+};
+
+export type ContactFormLocale = {
+  fields: {
+    name: {
+      label: string;
+      placeholder: string;
+    };
+    email: {
+      label: string;
+      placeholder: string;
+    };
+    phone: {
+      label: string;
+      placeholder: string;
+    };
+    subject: {
+      label: string;
+      placeholder: string;
+    };
+    message: {
+      label: string;
+      placeholder: string;
+    };
+  };
+  privacyNotice: string;
+  submitButton: string;
+  successMessage: string;
 };
 
 export type PortfolioLocale = {
@@ -113,6 +141,7 @@ export type PortfolioLocale = {
     headingHighlight: string;
     headingSuffix: string;
     viewAllButton: string;
+    viewProjectButton: string;
     items: Record<ProjectId, ProjectLocaleItem>;
   };
 
@@ -132,34 +161,7 @@ export type PortfolioLocale = {
     headingSuffix: string;
     description: string;
     items: Record<ContactId, ContactLocaleItem>;
-  };
-
-  contactForm: {
-    fields: {
-      name: {
-        label: string;
-        placeholder: string;
-      };
-      email: {
-        label: string;
-        placeholder: string;
-      };
-      phone: {
-        label: string;
-        placeholder: string;
-      };
-      subject: {
-        label: string;
-        placeholder: string;
-      };
-      message: {
-        label: string;
-        placeholder: string;
-      };
-    };
-    privacyNotice: string;
-    submitButton: string;
-    successMessage: string;
+    form: ContactFormLocale;
   };
 
   footer: {

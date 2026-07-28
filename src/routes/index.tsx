@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ptBR } from "@/data/locales/pt-BR";
 import { AboutSection } from "@/sections/AboutSection";
 import { ContactSection } from "@/sections/ContactSection";
 import { HeroSection } from "@/sections/HeroSection";
@@ -12,19 +13,20 @@ import { SkillsSection } from "@/sections/SkillsSection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Arthur Franklin" },
+      {
+        title: ptBR.seo.title,
+      },
       {
         name: "description",
-        content:
-          "Auxiliar de TI focado em infraestrutura, suporte técnico e monitoramento. Soluções confiáveis para ambientes corporativos.",
+        content: ptBR.seo.description,
       },
       {
         property: "og:title",
-        content: "Arthur Franklin — Auxiliar de TI",
+        content: ptBR.seo.openGraphTitle,
       },
       {
         property: "og:description",
-        content: "Infraestrutura, Suporte Técnico e Operações de TI.",
+        content: ptBR.seo.openGraphDescription,
       },
     ],
   }),
@@ -33,7 +35,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <div className="bg-page min-h-screen text-foreground">
+    <div className="min-h-screen bg-page text-foreground">
       <Header />
 
       <main>

@@ -1,17 +1,19 @@
-import type { StatItem } from "@/types/content";
+import type { LucideIcon } from "lucide-react";
 
 type StatCardProps = {
-  stat: StatItem;
+  value: string;
+  label: string;
+  icon: LucideIcon;
 };
 
-export function StatCard({ stat }: StatCardProps) {
+export function StatCard({ value, label, icon: Icon }: StatCardProps) {
   return (
     <div className="card-pro p-4">
-      <stat.icon className="h-5 w-5 text-accent" />
+      <Icon className="h-5 w-5 text-accent" />
 
-      <div className="mt-3 text-2xl font-bold tracking-tight">{stat.k}</div>
+      <div className="mt-4 text-xl font-bold">{value}</div>
 
-      <div className="text-[11px] text-muted-foreground leading-tight mt-1">{stat.v}</div>
+      <div className="mt-1 text-xs leading-tight text-muted-foreground">{label}</div>
     </div>
   );
 }

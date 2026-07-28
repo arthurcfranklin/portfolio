@@ -1,13 +1,14 @@
-import { ptBR } from "@/data/locales/pt-BR";
+import { ptBR } from "./pt-BR";
 import type { PortfolioLocale } from "@/types/locale";
 import type { SupportedLocale } from "@/types/preferences";
 
-export const locales: Partial<Record<SupportedLocale, PortfolioLocale>> = {
+export const locales: Record<SupportedLocale, PortfolioLocale> = {
   "pt-BR": ptBR,
+  "en-US": ptBR,
+  "es-ES": ptBR,
+  "fr-FR": ptBR,
 };
 
 export function getLocale(language: SupportedLocale): PortfolioLocale {
-  return locales[language] ?? ptBR;
+  return locales[language];
 }
-
-export { ptBR };

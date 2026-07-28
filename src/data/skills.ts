@@ -1,49 +1,18 @@
 import { Activity, ServerCog, Workflow } from "lucide-react";
 
-import type { SkillGroup } from "@/types/content";
+import type { SkillGroupModel } from "@/types/models";
 
-export const skillGroups: SkillGroup[] = [
+export const skillGroups: SkillGroupModel[] = [
   {
-    title: "Infraestrutura & Suporte",
+    id: "infrastructure",
     icon: ServerCog,
-    items: [
-      "Windows",
-      "Linux",
-      "Redes",
-      "Suporte Técnico",
-      "Troubleshooting",
-      "Gestão de Ativos",
-      "TCP/IP",
-    ],
   },
   {
-    title: "Monitoramento & Operações",
+    id: "monitoring",
     icon: Activity,
-    items: [
-      "Zabbix",
-      "Proxmox VE",
-      "Grafana",
-      "Observabilidade",
-      "Análise de Métricas",
-      "Análise de Incidentes",
-      "Documentação Técnica",
-    ],
   },
   {
-    title: "Desenvolvimento & Automação",
+    id: "development",
     icon: Workflow,
-    items: [
-      "Python",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "FastAPI",
-      "SQLAlchemy",
-      "SQLite",
-      "SQL",
-      "Git",
-      "GitHub",
-      "GitLab",
-    ],
   },
 ];
