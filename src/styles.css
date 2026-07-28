@@ -167,6 +167,18 @@
     background-color: var(--color-background);
   }
 
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition:
+      background-color 220ms ease,
+      color 220ms ease,
+      border-color 220ms ease,
+      box-shadow 220ms ease,
+      fill 220ms ease,
+      stroke 220ms ease !important;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -174,9 +186,6 @@
     font-feature-settings: "cv11", "ss01", "ss03";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition:
-      background-color 250ms ease,
-      color 250ms ease;
   }
 
   ::selection {
@@ -214,6 +223,14 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition: none !important;
+  }
+}
+
 @utility container-pro {
   margin-inline: auto;
   width: 100%;
@@ -228,7 +245,6 @@
     radial-gradient(ellipse 50% 40% at 90% 20%, var(--page-glow-secondary), transparent 70%),
     radial-gradient(ellipse 60% 40% at 10% 40%, var(--page-glow-tertiary), transparent 70%),
     linear-gradient(180deg, var(--page-base) 0%, var(--page-depth) 50%, var(--page-base) 100%);
-  transition: background-color 250ms ease;
 }
 
 @utility portrait-ring {
@@ -272,7 +288,6 @@
   transition:
     border-color 200ms ease,
     transform 200ms ease,
-    background 200ms ease,
     box-shadow 200ms ease;
 }
 

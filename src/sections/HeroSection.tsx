@@ -1,20 +1,57 @@
 import { ArrowRight, FolderGit2, Github, Linkedin, Mail } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 
 import { useLocale } from "@/hooks/useLocale";
 
 export function HeroSection() {
   const locale = useLocale();
+  const shouldReduceMotion = useReducedMotion();
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.12,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: shouldReduceMotion ? 0 : 24,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: shouldReduceMotion ? 0 : 0.6,
+        ease: [0.22, 1, 0.36, 1] as const,
+      },
+    },
+  };
 
   return (
     <section id="top" className="relative flex min-h-[calc(100vh-4rem)] items-center pb-24 pt-16">
       <div className="container-pro w-full">
-        <div className="animate-fade-up mx-auto flex max-w-5xl flex-col items-center text-center">
-          <h1 className="text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl lg:text-7xl">
+        <motion.div
+          className="mx-auto flex max-w-5xl flex-col items-center text-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl lg:text-7xl"
+          >
             {locale.hero.firstName}{" "}
             <span className="text-violet-gradient">{locale.hero.lastName}</span>
-          </h1>
+          </motion.h1>
 
-          <p className="mt-5 text-xl font-medium text-foreground/85 md:text-[1.55rem]">
+          <motion.p
+            variants={itemVariants}
+            className="mt-5 text-xl font-medium text-foreground/85 md:text-[1.55rem]"
+          >
             {locale.hero.roles.map((role, index) => (
               <span key={role}>
                 {index > 0 && <span className="mx-2 text-muted-foreground">|</span>}
@@ -22,13 +59,16 @@ export function HeroSection() {
                 {role}
               </span>
             ))}
-          </p>
+          </motion.p>
 
-          <p className="mt-8 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
+          <motion.p
+            variants={itemVariants}
+            className="mt-8 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg"
+          >
             {locale.hero.description}
-          </p>
+          </motion.p>
 
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <motion.div variants={itemVariants} className="mt-9 flex flex-wrap justify-center gap-3">
             <a href="/curriculo" className="btn-primary">
               {locale.hero.resumeButton}
               <ArrowRight className="h-4 w-4" />
@@ -38,9 +78,12 @@ export function HeroSection() {
               {locale.hero.projectsButton}
               <ArrowRight className="h-4 w-4" />
             </a>
-          </div>
+          </motion.div>
 
-          <div className="mt-8 flex items-center justify-center gap-4 text-muted-foreground">
+          <motion.div
+            variants={itemVariants}
+            className="mt-8 flex items-center justify-center gap-4 text-muted-foreground"
+          >
             <a
               href="https://arthurfranklin.com.br/github"
               target="_blank"
@@ -78,8 +121,8 @@ export function HeroSection() {
             >
               <Mail className="h-5 w-5" />
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

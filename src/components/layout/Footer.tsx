@@ -17,10 +17,12 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <a href="#top" className="flex items-center gap-3">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-accent/40 bg-accent/10 font-bold text-accent">
-                AF
-              </span>
-
+              <img
+                src="/favicon-180x180.png"
+                alt=""
+                aria-hidden="true"
+                className="h-9 w-9 rounded-lg"
+              />
               <div className="leading-tight">
                 <div className="text-base font-semibold">{fullName}</div>
 
