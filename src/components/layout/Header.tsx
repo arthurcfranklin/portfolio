@@ -1,4 +1,5 @@
 import { LanguageToggle } from "@/components/layout/LanguageToggle";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { navigation } from "@/data/navigation";
 import { useLocale } from "@/hooks/useLocale";
 
@@ -9,7 +10,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-black/70 backdrop-blur-xl">
-      <div className="container-pro grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
+      <div
+        className="
+          grid h-16 w-full
+          grid-cols-[minmax(0,1fr)_auto]
+          items-center gap-4
+          px-4 sm:px-6 lg:grid-cols-[auto_minmax(0,1fr)_auto]
+          lg:px-10 xl:px-14
+        "
+      >
         <a href="#top" className="flex min-w-0 items-center gap-3 justify-self-start">
           <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-accent/40 bg-accent/10 font-bold text-accent">
             AF
@@ -24,12 +33,12 @@ export function Header() {
           </div>
         </a>
 
-        <nav className="hidden grid-cols-[4rem_4.5rem_6.5rem_5.5rem_7.5rem_4.5rem] items-center gap-2 lg:grid">
+        <nav className="hidden items-center justify-center gap-5 lg:flex xl:gap-7">
           {navigation.map((item) => (
             <a
               key={item.id}
               href={item.href}
-              className="text-center text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap text-center text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {locale.navigation[item.id].label}
             </a>
@@ -37,6 +46,8 @@ export function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2 justify-self-end">
+          <ThemeToggle />
+
           <LanguageToggle />
 
           <a href="#contato" className="btn-secondary !h-9 w-[164px] justify-center !text-sm">
