@@ -171,6 +171,7 @@ export type PortfolioLocale = {
     socialTitle: string;
     websiteLabel: string;
     copyright: string;
+    role: string;
     signature: string;
     backToTop: string;
     backToTopAriaLabel: string;

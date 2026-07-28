@@ -1,10 +1,4 @@
-import {
-  ArrowRight,
-  FolderGit2,
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { ArrowRight, FolderGit2, Github, Linkedin, Mail } from "lucide-react";
 
 import { useLocale } from "@/hooks/useLocale";
 
@@ -12,25 +6,18 @@ export function HeroSection() {
   const locale = useLocale();
 
   return (
-    <section
-      id="top"
-      className="relative flex min-h-[calc(100vh-4rem)] items-center pb-24 pt-16"
-    >
+    <section id="top" className="relative flex min-h-[calc(100vh-4rem)] items-center pb-24 pt-16">
       <div className="container-pro w-full">
         <div className="animate-fade-up mx-auto flex max-w-5xl flex-col items-center text-center">
           <h1 className="text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl lg:text-7xl">
             {locale.hero.firstName}{" "}
-            <span className="text-violet-gradient">
-              {locale.hero.lastName}
-            </span>
+            <span className="text-violet-gradient">{locale.hero.lastName}</span>
           </h1>
 
           <p className="mt-5 text-xl font-medium text-foreground/85 md:text-[1.55rem]">
             {locale.hero.roles.map((role, index) => (
               <span key={role}>
-                {index > 0 && (
-                  <span className="mx-2 text-muted-foreground">|</span>
-                )}
+                {index > 0 && <span className="mx-2 text-muted-foreground">|</span>}
 
                 {role}
               </span>

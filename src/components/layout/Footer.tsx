@@ -1,13 +1,4 @@
-import {
-  ArrowUp,
-  FolderGit2,
-  Github,
-  Globe,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { ArrowUp, FolderGit2, Github, Globe, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 import { navigation } from "@/data/navigation";
 import { useLocale } from "@/hooks/useLocale";
@@ -30,7 +21,13 @@ export function Footer() {
                 AF
               </span>
 
-              <span className="text-base font-semibold">{fullName}</span>
+              <div className="leading-tight">
+                <div className="text-base font-semibold">{fullName}</div>
+
+                <div className="mt-0.5 text-[11px] font-normal text-muted-foreground">
+                  {locale.footer.role}
+                </div>
+              </div>
             </a>
 
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">

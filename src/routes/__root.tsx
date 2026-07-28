@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import { PreferencesProvider } from "@/context/PreferencesProvider";
+import { HashScrollRestorer } from "@/components/layout/HashScrollRestorer";
 
 import appCss from "../styles.css?url";
 import { ptBR } from "@/data/locales/pt-BR";
@@ -157,6 +158,7 @@ function RootComponent() {
     <PreferencesProvider>
       <QueryClientProvider client={queryClient}>
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <HashScrollRestorer />
         <Outlet />
       </QueryClientProvider>
     </PreferencesProvider>

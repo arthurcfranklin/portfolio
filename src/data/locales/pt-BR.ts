@@ -10,7 +10,7 @@ export const ptBR = {
   },
 
   header: {
-    tagline: "Suporte Técnico · Infraestrutura · Automação",
+    tagline: "arthurfranklin.com.br",
     contactButton: "Entrar em Contato",
     mobileContactButton: "Contato",
   },
@@ -121,7 +121,7 @@ export const ptBR = {
           "Observabilidade",
           "Análise de Métricas",
           "Análise de Incidentes",
-          "Documentação Técnica",
+          "Virtualização",
         ],
       },
       development: {
@@ -215,11 +215,11 @@ export const ptBR = {
 
   contact: {
     sectionLabel: "Entre em Contato",
-    headingPrefix: "O seu próximo projeto ",
-    headingHighlight: "pode começar aqui",
+    headingPrefix: "Vamos construir ",
+    headingHighlight: "algo juntos",
     headingSuffix: "!",
     description:
-      "Seja para uma oportunidade profissional, uma colaboração ou uma troca de experiências, estou sempre aberto a conversar.",
+      "Seja para uma oportunidade profissional, uma colaboração ou uma troca de experiências, vamos conversar .",
 
     items: {
       email: {
@@ -281,13 +281,14 @@ export const ptBR = {
   },
 
   footer: {
-    description: "Soluções voltadas a suporte técnico, infraestrutura, monitoramento e automação.",
+    description: "Transformando desafios em soluções práticas para TI.",
+    role: "arthurfranklin.com.br",
     navigationTitle: "Navegação",
     contactTitle: "Contato",
     socialTitle: "Redes Sociais",
     websiteLabel: "Website",
     copyright: "Arthur Franklin. Todos os direitos reservados.",
-    signature: "Desenvolvido com foco em desempenho, design e propósito.",
+    signature: "Desenvolvido com as melhores práticas de engenharia de software.",
     backToTop: "Voltar ao topo",
     backToTopAriaLabel: "Voltar ao topo",
   },

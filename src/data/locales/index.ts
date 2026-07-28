@@ -1,10 +1,12 @@
+import { enUS } from "./en-US";
 import { ptBR } from "./pt-BR";
+
 import type { PortfolioLocale } from "@/types/locale";
 import type { SupportedLocale } from "@/types/preferences";
 
 export const locales: Record<SupportedLocale, PortfolioLocale> = {
   "pt-BR": ptBR,
-  "en-US": ptBR,
+  "en-US": enUS,
   "es-ES": ptBR,
   "fr-FR": ptBR,
 };

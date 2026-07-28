@@ -11,7 +11,7 @@ export function ServicesSection() {
       id="servicos"
       className="section-pad flex min-h-[calc(100vh-4rem)] scroll-mt-16 items-center"
     >
-      <div className="container-pro w-full">
+      <div className="container-pro w-full -translate-y-10">
         <div className="max-w-2xl">
           <SectionLabel>{locale.services.sectionLabel}</SectionLabel>
 
