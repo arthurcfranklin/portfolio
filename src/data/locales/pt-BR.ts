@@ -219,7 +219,7 @@ export const ptBR = {
     headingHighlight: "algo juntos",
     headingSuffix: "!",
     description:
-      "Seja para uma oportunidade profissional, uma colaboração ou uma troca de experiências, vamos conversar .",
+      "Seja para uma oportunidade profissional, uma colaboração ou uma troca de experiências, vamos conversar.",
 
     items: {
       email: {
