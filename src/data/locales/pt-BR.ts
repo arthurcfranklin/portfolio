@@ -241,7 +241,7 @@ export const ptBR = {
 
       phone: {
         label: "Telefone",
-        value: "Disponível em breve",
+        value: "(21) 99079-8744",
       },
     },
 

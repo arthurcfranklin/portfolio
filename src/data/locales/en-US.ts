@@ -270,7 +270,7 @@ export const enUS = {
 
       phone: {
         label: "Phone",
-        value: "Available upon request",
+        value: "(21) 99079-8744",
       },
     },
 

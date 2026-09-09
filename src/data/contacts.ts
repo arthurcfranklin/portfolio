@@ -21,6 +21,6 @@ export const contacts: ContactModel[] = [
   {
     id: "phone",
     icon: Phone,
-    href: null,
+    href: "tel:+5521990798744",
   },
 ];

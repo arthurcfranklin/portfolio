@@ -310,7 +310,7 @@ export const frFR: PortfolioLocale = {
 
       phone: {
         label: "Téléphone",
-        value: "Disponible prochainement",
+        value: "(21) 99079-8744",
       },
     },
 

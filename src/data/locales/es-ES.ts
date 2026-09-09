@@ -298,7 +298,7 @@ export const esES: PortfolioLocale = {
 
       phone: {
         label: "Teléfono",
-        value: "Disponible próximamente",
+        value: "(21) 99079-8744",
       },
     },
 
