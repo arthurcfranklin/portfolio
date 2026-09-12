@@ -214,13 +214,13 @@ export const frFR: PortfolioLocale = {
           "Application web de gestion de bibliothèque conçue pour simplifier le suivi des collections, des emprunts et des retours.",
       },
 
-      infratracker: {
-        name: "InfraTracker",
+      atlas: {
+        name: "Atlas",
 
-        tag: "Infrastructure & Supervision",
+        tag: "Productivité et Organisation",
 
         description:
-          "Outil d'inventaire et de supervision des actifs, conçu pour faciliter la gestion et l'observabilité des environnements informatiques.",
+          "Espace de travail personnel pour organiser les tâches et les projets, développé autour de la productivité, de la fluidité et de l’expérience utilisateur.",
       },
     },
   },

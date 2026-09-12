@@ -163,11 +163,11 @@ export const ptBR = {
         description:
           "Sistema web para gestão de bibliotecas, desenvolvido para simplificar o controle de acervos, empréstimos e devoluções.",
       },
-      infratracker: {
-        name: "InfraTracker",
-        tag: "Infraestrutura e Monitoramento",
+      atlas: {
+        name: "Atlas",
+        tag: "Produtividade e Organização",
         description:
-          "Ferramenta para inventário e monitoramento de ativos, desenvolvida para facilitar a gestão e a observabilidade de ambientes de TI.",
+          "Workspace pessoal para organização de tarefas e projetos, desenvolvido com foco em produtividade, fluidez e experiência de uso.",
       },
     },
   },

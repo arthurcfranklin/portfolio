@@ -1,4 +1,4 @@
-import { Activity, BookOpen, FileText } from "lucide-react";
+import { BookOpen, FileText, LayoutDashboard } from "lucide-react";
 
 import type { ProjectModel } from "@/types/models";
 
@@ -16,9 +16,9 @@ export const projects: ProjectModel[] = [
     url: "https://arthurfranklin.com.br/libraryflow",
   },
   {
-    id: "infratracker",
-    tech: ["Python", "FastAPI", "SQLite", "Zabbix API", "Grafana", "Git", "GitHub"],
-    icon: Activity,
-    url: "https://arthurfranklin.com.br/infratracker",
+    id: "atlas",
+    tech: ["React", "TypeScript", "TanStack", "Tailwind CSS", "Motion", "Git", "GitHub"],
+    icon: LayoutDashboard,
+    url: "https://arthurfranklin.com.br/atlas",
   },
 ];

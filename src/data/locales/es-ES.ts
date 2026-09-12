@@ -202,13 +202,13 @@ export const esES: PortfolioLocale = {
           "Sistema web para la gestión de bibliotecas, desarrollado para simplificar el control de colecciones, préstamos y devoluciones.",
       },
 
-      infratracker: {
-        name: "InfraTracker",
+      atlas: {
+        name: "Atlas",
 
-        tag: "Infraestructura y Monitoreo",
+        tag: "Productividad y Organización",
 
         description:
-          "Herramienta para el inventario y monitoreo de activos, desarrollada para facilitar la gestión y la observabilidad de entornos de TI.",
+          "Espacio de trabajo personal para organizar tareas y proyectos, desarrollado con foco en productividad, fluidez y experiencia de uso.",
       },
     },
   },

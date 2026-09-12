@@ -182,11 +182,11 @@ export const enUS = {
           "Library management platform designed to simplify catalog management, circulation and day-to-day operations.",
       },
 
-      infratracker: {
-        name: "InfraTracker",
-        tag: "Infrastructure & Monitoring",
+      atlas: {
+        name: "Atlas",
+        tag: "Productivity & Organization",
         description:
-          "Asset inventory and monitoring solution designed to improve visibility, organization and operational control across IT environments.",
+          "Personal workspace for organizing tasks and projects, designed with a focus on productivity, fluidity, and user experience.",
       },
     },
   },

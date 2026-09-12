@@ -6,7 +6,7 @@ export type StatId = "experience" | "projects" | "certifications";
 
 export type SkillGroupId = "infrastructure" | "monitoring" | "development";
 
-export type ProjectId = "forgedocs" | "libraryflow" | "infratracker";
+export type ProjectId = "forgedocs" | "libraryflow" | "atlas";
 
 export type ServiceId =
   | "technical-support"
