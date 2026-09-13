@@ -410,6 +410,79 @@ export const enUS = {
   ],
 },
 
+  terms: {
+  eyebrow: "Legal",
+  title: "Terms of Use",
+  lastUpdatedLabel: "Last updated",
+  lastUpdated: "September 13, 2026",
+
+  introduction: [
+    "These Terms of Use establish the conditions applicable to accessing and using arthurfranklin.com.br and its content.",
+    "By using this website, visitors agree to do so lawfully, responsibly, and in accordance with the purposes described on this page.",
+  ],
+
+  sections: [
+    {
+      title: "Acceptance and purpose",
+      paragraphs: [
+        "This website serves professional and informational purposes and is used to present information about Arthur Franklin, his experience, skills, projects, contact methods, and other content related to his professional work.",
+        "Access to the website is provided free of charge and does not, by itself, establish any contractual, commercial, employment, or service relationship between the visitor and the website owner.",
+      ],
+    },
+    {
+      title: "Use of the website",
+      paragraphs: [
+        "Visitors agree to use the website lawfully and not to engage in activities that could compromise its security, availability, integrity, or operation.",
+        "Attempting to gain unauthorized access to systems, resources, data, or restricted areas related to the website is prohibited, as is using its resources for abusive, fraudulent, or unlawful activities.",
+      ],
+    },
+    {
+      title: "Content and intellectual property",
+      paragraphs: [
+        "Unless otherwise indicated, the texts, visual elements, identity, structure, and other original content on this website belong to the website owner.",
+        "Viewing and personal use of the content are permitted. Reproduction, distribution, modification, or commercial use of original content requires prior authorization, except where permitted by applicable law or where a specific license is provided with the relevant material.",
+      ],
+    },
+    {
+      title: "Projects, code, and external links",
+      paragraphs: [
+        "The website may feature projects, repositories, demonstrations, and references hosted on third-party platforms.",
+        "Projects or code published in external repositories are subject to the respective licenses and conditions specified on those platforms.",
+        "Links to third-party services or websites are provided for reference or convenience. The website owner does not control the content, availability, privacy practices, or policies adopted by those external services.",
+      ],
+    },
+    {
+      title: "Availability and changes",
+      paragraphs: [
+        "Efforts are made to keep the website available, current, and functional, but continuous availability or the absence of failures, interruptions, or temporary unavailability is not guaranteed.",
+        "Content, features, structure, featured projects, and other elements of the website may be modified, updated, or removed at any time.",
+      ],
+    },
+    {
+      title: "Limitation of liability",
+      paragraphs: [
+        "The information provided on this website is professional and informational in nature and is presented in good faith.",
+        "To the extent permitted by applicable law, the website owner is not liable for damages resulting from improper use of the content, temporary unavailability, failures of third-party services, or decisions made solely on the basis of information presented on this website.",
+      ],
+    },
+    {
+      title: "Privacy and data protection",
+      paragraphs: [
+        "The processing of personal data related to use of the website and the contact form is described in the Privacy Policy.",
+        "Where applicable, the use of cookies and similar technologies will also be detailed in the Cookie Policy and in the preferences made available to visitors.",
+      ],
+    },
+    {
+      title: "Contact and changes to these terms",
+      paragraphs: [
+        "The website owner is Arthur Franklin, owner of arthurfranklin.com.br, and can be contacted at arthur@arthurfranklin.com.br.",
+        "These Terms of Use may be updated to reflect changes to the website, its services, or applicable requirements. The current version will remain available on this page together with its corresponding update date.",
+        "Questions regarding these Terms of Use may be sent to arthur@arthurfranklin.com.br.",
+      ],
+    },
+  ],
+},
+
   footer: {
     role: "arthurfranklin.com.br",
     navigationTitle: "Navigation",

@@ -437,6 +437,79 @@ export const esES: PortfolioLocale = {
   ],
 },
 
+  terms: {
+  eyebrow: "Legal",
+  title: "Términos de Uso",
+  lastUpdatedLabel: "Última actualización",
+  lastUpdated: "13 de septiembre de 2026",
+
+  introduction: [
+    "Estos Términos de Uso establecen las condiciones aplicables al acceso y uso de arthurfranklin.com.br y de sus contenidos.",
+    "Al utilizar este sitio web, el visitante acepta hacerlo de forma lícita, responsable y compatible con las finalidades descritas en esta página.",
+  ],
+
+  sections: [
+    {
+      title: "Aceptación y finalidad",
+      paragraphs: [
+        "Este sitio web tiene una finalidad profesional e informativa y se utiliza para presentar información sobre Arthur Franklin, su experiencia, competencias, proyectos, formas de contacto y otros contenidos relacionados con su actividad profesional.",
+        "El acceso al sitio web se ofrece de forma gratuita y no establece, por sí solo, ninguna relación contractual, comercial, laboral o de prestación de servicios entre el visitante y el responsable del sitio.",
+      ],
+    },
+    {
+      title: "Uso del sitio web",
+      paragraphs: [
+        "El visitante se compromete a utilizar el sitio web de forma lícita y a no realizar actos que puedan comprometer su seguridad, disponibilidad, integridad o funcionamiento.",
+        "No está permitido intentar obtener acceso no autorizado a sistemas, recursos, datos o áreas restringidas relacionadas con el sitio web, ni utilizar sus recursos para actividades abusivas, fraudulentas o ilícitas.",
+      ],
+    },
+    {
+      title: "Contenido y propiedad intelectual",
+      paragraphs: [
+        "Salvo que se indique lo contrario, los textos, elementos visuales, identidad, estructura y demás contenidos originales de este sitio web pertenecen al responsable del sitio.",
+        "Se permite la visualización y el uso personal de los contenidos. La reproducción, distribución, modificación o utilización comercial de contenido original requiere autorización previa, salvo en los casos permitidos por la legislación aplicable o cuando exista una licencia específica indicada en el material correspondiente.",
+      ],
+    },
+    {
+      title: "Proyectos, código y enlaces externos",
+      paragraphs: [
+        "El sitio web puede presentar proyectos, repositorios, demostraciones y referencias alojados en plataformas de terceros.",
+        "Los proyectos o códigos publicados en repositorios externos están sujetos a las respectivas licencias y condiciones indicadas en dichas plataformas.",
+        "Los enlaces a servicios o sitios web de terceros se proporcionan como referencia o por conveniencia. El responsable de este sitio web no controla el contenido, la disponibilidad, las prácticas de privacidad ni las políticas adoptadas por dichos servicios externos.",
+      ],
+    },
+    {
+      title: "Disponibilidad y modificaciones",
+      paragraphs: [
+        "Se procura mantener el sitio web disponible, actualizado y funcional, pero no se garantiza su disponibilidad continua ni la ausencia de fallos, interrupciones o indisponibilidades temporales.",
+        "Los contenidos, funcionalidades, estructura, proyectos presentados y demás elementos del sitio web pueden ser modificados, actualizados o eliminados en cualquier momento.",
+      ],
+    },
+    {
+      title: "Limitación de responsabilidad",
+      paragraphs: [
+        "La información disponible en este sitio web tiene carácter profesional e informativo y se presenta de buena fe.",
+        "En la medida permitida por la legislación aplicable, el responsable del sitio web no se responsabiliza por daños derivados del uso inadecuado del contenido, indisponibilidad temporal, fallos de servicios de terceros o decisiones tomadas exclusivamente con base en la información presentada en este sitio web.",
+      ],
+    },
+    {
+      title: "Privacidad y protección de datos",
+      paragraphs: [
+        "El tratamiento de datos personales relacionado con el uso del sitio web y el formulario de contacto se describe en la Política de Privacidad.",
+        "Cuando corresponda, el uso de cookies y tecnologías similares también se detallará en la Política de Cookies y en las preferencias disponibles para el visitante.",
+      ],
+    },
+    {
+      title: "Contacto y modificaciones de los términos",
+      paragraphs: [
+        "El responsable del sitio web es Arthur Franklin, titular de arthurfranklin.com.br, y puede ser contactado a través de arthur@arthurfranklin.com.br.",
+        "Estos Términos de Uso pueden actualizarse para reflejar cambios en el sitio web, sus servicios o los requisitos aplicables. La versión vigente permanecerá disponible en esta página junto con la fecha correspondiente de actualización.",
+        "Las consultas relacionadas con estos Términos de Uso pueden enviarse a arthur@arthurfranklin.com.br.",
+      ],
+    },
+  ],
+},
+
   footer: {
     role: "arthurfranklin.com.br",
     navigationTitle: "Navegación",

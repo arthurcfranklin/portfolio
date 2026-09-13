@@ -449,6 +449,79 @@ export const frFR: PortfolioLocale = {
   ],
 },
 
+  terms: {
+  eyebrow: "Mentions légales",
+  title: "Conditions d'utilisation",
+  lastUpdatedLabel: "Dernière mise à jour",
+  lastUpdated: "13 septembre 2026",
+
+  introduction: [
+    "Les présentes Conditions d'utilisation définissent les conditions applicables à l'accès et à l'utilisation de arthurfranklin.com.br et de son contenu.",
+    "En utilisant ce site, le visiteur accepte de le faire de manière licite, responsable et conforme aux finalités présentées sur cette page.",
+  ],
+
+  sections: [
+    {
+      title: "Acceptation et finalité",
+      paragraphs: [
+        "Ce site a une finalité professionnelle et informative et est utilisé pour présenter des informations sur Arthur Franklin, son expérience, ses compétences, ses projets, ses moyens de contact et d'autres contenus liés à son activité professionnelle.",
+        "L'accès au site est fourni gratuitement et n'établit, à lui seul, aucune relation contractuelle, commerciale, professionnelle ou de prestation de services entre le visiteur et le responsable du site.",
+      ],
+    },
+    {
+      title: "Utilisation du site",
+      paragraphs: [
+        "Le visiteur s'engage à utiliser le site de manière licite et à ne pas entreprendre d'actions susceptibles de compromettre sa sécurité, sa disponibilité, son intégrité ou son fonctionnement.",
+        "Il est interdit de tenter d'obtenir un accès non autorisé aux systèmes, ressources, données ou zones restreintes liés au site, ainsi que d'utiliser ses ressources à des fins abusives, frauduleuses ou illicites.",
+      ],
+    },
+    {
+      title: "Contenu et propriété intellectuelle",
+      paragraphs: [
+        "Sauf indication contraire, les textes, éléments visuels, identité, structure et autres contenus originaux de ce site appartiennent au responsable du site.",
+        "La consultation et l'utilisation personnelle des contenus sont autorisées. La reproduction, la distribution, la modification ou l'utilisation commerciale d'un contenu original nécessite une autorisation préalable, sauf dans les cas autorisés par la législation applicable ou lorsqu'une licence spécifique est indiquée pour le contenu concerné.",
+      ],
+    },
+    {
+      title: "Projets, code et liens externes",
+      paragraphs: [
+        "Le site peut présenter des projets, des dépôts de code, des démonstrations et des références hébergés sur des plateformes tierces.",
+        "Les projets ou codes publiés dans des dépôts externes sont soumis aux licences et conditions respectives indiquées sur ces plateformes.",
+        "Les liens vers des services ou sites tiers sont fournis à titre de référence ou de commodité. Le responsable de ce site ne contrôle pas le contenu, la disponibilité, les pratiques de confidentialité ou les politiques adoptées par ces services externes.",
+      ],
+    },
+    {
+      title: "Disponibilité et modifications",
+      paragraphs: [
+        "Des efforts sont déployés pour maintenir le site disponible, à jour et fonctionnel, mais sa disponibilité continue ou l'absence de pannes, d'interruptions ou d'indisponibilités temporaires ne peut être garantie.",
+        "Les contenus, fonctionnalités, structure, projets présentés et autres éléments du site peuvent être modifiés, mis à jour ou supprimés à tout moment.",
+      ],
+    },
+    {
+      title: "Limitation de responsabilité",
+      paragraphs: [
+        "Les informations mises à disposition sur ce site sont de nature professionnelle et informative et sont présentées de bonne foi.",
+        "Dans la mesure permise par la législation applicable, le responsable du site ne saurait être tenu responsable des dommages résultant d'une utilisation inappropriée du contenu, d'une indisponibilité temporaire, de défaillances de services tiers ou de décisions prises exclusivement sur la base des informations présentées sur ce site.",
+      ],
+    },
+    {
+      title: "Confidentialité et protection des données",
+      paragraphs: [
+        "Le traitement des données personnelles lié à l'utilisation du site et du formulaire de contact est décrit dans la Politique de confidentialité.",
+        "Le cas échéant, l'utilisation de cookies et de technologies similaires sera également détaillée dans la Politique relative aux cookies et dans les préférences mises à la disposition du visiteur.",
+      ],
+    },
+    {
+      title: "Contact et modification des conditions",
+      paragraphs: [
+        "Le responsable du site est Arthur Franklin, titulaire de arthurfranklin.com.br, et peut être contacté à l'adresse arthur@arthurfranklin.com.br.",
+        "Les présentes Conditions d'utilisation peuvent être mises à jour afin de refléter les modifications du site, de ses services ou des exigences applicables. La version en vigueur restera disponible sur cette page avec sa date de mise à jour correspondante.",
+        "Toute question relative aux présentes Conditions d'utilisation peut être envoyée à arthur@arthurfranklin.com.br.",
+      ],
+    },
+  ],
+},
+
   footer: {
     role: "arthurfranklin.com.br",
     navigationTitle: "Navigation",

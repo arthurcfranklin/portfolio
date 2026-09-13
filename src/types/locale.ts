@@ -168,6 +168,7 @@ export type PortfolioLocale = {
   };
 
   privacy: PrivacyLocale;
+  terms: TermsLocale;
   footer: {
     navigationTitle: string;
     contactTitle: string;
@@ -192,6 +193,15 @@ export type LegalSectionLocale = {
 };
 
 export type PrivacyLocale = {
+  eyebrow: string;
+  title: string;
+  lastUpdatedLabel: string;
+  lastUpdated: string;
+  introduction: string[];
+  sections: LegalSectionLocale[];
+};
+
+export type TermsLocale = {
   eyebrow: string;
   title: string;
   lastUpdatedLabel: string;
