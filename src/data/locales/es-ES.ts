@@ -331,10 +331,11 @@ export const esES: PortfolioLocale = {
       },
 
       privacyNotice: "Tus datos se utilizarán únicamente para responder a este mensaje.",
-
       submitButton: "Enviar mensaje",
-
+      sendingMessage: "Enviando...",
       successMessage: "Mensaje enviado ✓",
+      errorMessage: "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      verificationErrorMessage: "No se pudo completar la verificación de seguridad.",
     },
   },
 

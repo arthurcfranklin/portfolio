@@ -139,6 +139,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={submit}
+      aria-busy={status === "sending"}
       className="card-pro p-7 md:p-9"
     >
       <div
@@ -283,8 +284,11 @@ export function ContactForm() {
         />
 
         {turnstileError && (
-          <p className="mt-2 text-xs text-destructive">
-            Não foi possível concluir a verificação de segurança.
+          <p
+            role="alert"
+            className="mt-2 text-xs text-destructive"
+          >
+            {formLocale.verificationErrorMessage}
           </p>
         )}
       </div>
@@ -300,7 +304,7 @@ export function ContactForm() {
           disabled={status === "sending"}
         >
           {status === "sending"
-            ? "Enviando..."
+            ? formLocale.sendingMessage
             : status === "sent"
               ? formLocale.successMessage
               : formLocale.submitButton}
@@ -317,9 +321,20 @@ export function ContactForm() {
           role="alert"
           className="mt-4 text-sm text-destructive"
         >
-          Não foi possível enviar a mensagem. Tente novamente.
+          {formLocale.errorMessage}
         </p>
       )}
+      <p
+        className="sr-only"
+        role="status"
+        aria-live="polite"
+      >
+        {status === "sent"
+          ? formLocale.successMessage
+          : status === "sending"
+          ? formLocale.sendingMessage
+          : ""}
+      </p>
     </form>
   );
 }

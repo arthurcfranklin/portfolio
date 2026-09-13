@@ -343,10 +343,11 @@ export const frFR: PortfolioLocale = {
       },
 
       privacyNotice: "Vos données servent uniquement à répondre à votre message.",
-
       submitButton: "Envoyer le message",
-
+      sendingMessage: "Envoi en cours...",
       successMessage: "Message envoyé ✓",
+      errorMessage: "Impossible d'envoyer le message. Veuillez réessayer.",
+      verificationErrorMessage: "Impossible de terminer la vérification de sécurité.",
     },
   },
 

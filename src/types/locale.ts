@@ -81,7 +81,10 @@ export type ContactFormLocale = {
   };
   privacyNotice: string;
   submitButton: string;
+  sendingMessage: string;
   successMessage: string;
+  errorMessage: string;
+  verificationErrorMessage: string;
 };
 
 export type PortfolioLocale = {

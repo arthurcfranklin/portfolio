@@ -276,7 +276,10 @@ export const ptBR = {
       privacyNotice: "Seus dados serão usados apenas para responder a esta mensagem.",
 
       submitButton: "Enviar mensagem",
+      sendingMessage: "Enviando...",
       successMessage: "Mensagem enviada ✓",
+      errorMessage: "Não foi possível enviar a mensagem. Tente novamente.",
+      verificationErrorMessage: "Não foi possível concluir a verificação de segurança."
     },
   },
 

@@ -305,7 +305,10 @@ export const enUS = {
       privacyNotice: "Your information will only be used to respond to this message.",
 
       submitButton: "Send Message",
+      sendingMessage: "Sending...",
       successMessage: "Message sent ✓",
+      errorMessage: "We couldn't send your message. Please try again.",
+      verificationErrorMessage: "We couldn't complete the security verification.",
     },
   },
 
