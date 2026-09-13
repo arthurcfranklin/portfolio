@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
 
 import { LanguageToggle } from "@/components/layout/LanguageToggle";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
@@ -6,6 +7,12 @@ import { navigation } from "@/data/navigation";
 import { useLocale } from "@/hooks/useLocale";
 
 export function Header() {
+  const pathname = useRouterState({
+    select: (state) => state.location.pathname,
+  });
+
+  const isHome = pathname === "/";
+
   const locale = useLocale();
 
   const [activeSection, setActiveSection] = useState("home");
@@ -13,7 +20,13 @@ export function Header() {
   const fullName = `${locale.hero.firstName} ${locale.hero.lastName}`;
 
   useEffect(() => {
-    const sectionIds = navigation.map((item) => item.href.replace("#", ""));
+    if (!isHome) {
+      return;
+    }
+
+    const sectionIds = navigation.map((item) =>
+      item.href.replace("#", ""),
+    );
 
     const sections = sectionIds
       .map((id) => document.getElementById(id))
@@ -23,7 +36,10 @@ export function Header() {
       (entries) => {
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+          .sort(
+            (a, b) =>
+              b.intersectionRatio - a.intersectionRatio,
+          );
 
         const mostVisibleSection = visibleSections[0];
 
@@ -37,13 +53,18 @@ export function Header() {
       },
     );
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+
       observer.disconnect();
     };
-  }, []);
+  }, [isHome]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle bg-background/80 backdrop-blur-xl">
@@ -57,9 +78,13 @@ export function Header() {
         "
       >
         <a
-          href="#home"
+          href={isHome ? "#home" : "/"}
           className="flex min-w-0 items-center gap-3 justify-self-start"
-          onClick={() => setActiveSection("home")}
+          onClick={() => {
+            if (isHome) {
+              setActiveSection("home");
+            }
+          }}
         >
           <img
             src="/favicon-192x192.png"
@@ -67,8 +92,11 @@ export function Header() {
             aria-hidden="true"
             className="h-9 w-9 rounded-lg"
           />
+
           <div className="min-w-0 leading-tight">
-            <div className="truncate text-sm font-semibold">{fullName}</div>
+            <div className="truncate text-sm font-semibold">
+              {fullName}
+            </div>
 
             <span className="hidden whitespace-nowrap text-[11px] text-accent/80 xl:block">
               {locale.header.tagline}
@@ -79,13 +107,22 @@ export function Header() {
         <nav className="hidden items-center justify-center gap-5 lg:flex xl:gap-7">
           {navigation.map((item) => {
             const sectionId = item.href.replace("#", "");
-            const isActive = activeSection === sectionId;
+            const isActive =
+              isHome && activeSection === sectionId;
 
             return (
               <a
                 key={item.id}
-                href={item.href}
-                onClick={() => setActiveSection(sectionId)}
+                href={
+                  isHome
+                    ? item.href
+                    : `/${item.href}`
+                }
+                onClick={() => {
+                  if (isHome) {
+                    setActiveSection(sectionId);
+                  }
+                }}
                 className={`
                   whitespace-nowrap text-center text-sm
                   transition-[color,font-weight] duration-200
@@ -108,13 +145,25 @@ export function Header() {
           <LanguageToggle />
 
           <a
-            href="#contact"
-            onClick={() => setActiveSection("contact")}
-            className="btn-secondary !h-9 w-[164px] justify-center !text-sm"
+            href={
+              isHome
+                ? "#contact"
+                : "/#contact"
+            }
+            onClick={() => {
+              if (isHome) {
+                setActiveSection("contact");
+              }
+            }}
+            className="btn-secondary !h-9 w-[176px] justify-center whitespace-nowrap !text-sm"
           >
-            <span className="hidden sm:inline">{locale.header.contactButton}</span>
+            <span className="hidden sm:inline">
+              {locale.header.contactButton}
+            </span>
 
-            <span className="sm:hidden">{locale.header.mobileContactButton}</span>
+            <span className="sm:hidden">
+              {locale.header.mobileContactButton}
+            </span>
           </a>
         </div>
       </div>
