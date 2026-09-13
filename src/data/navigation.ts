@@ -3,26 +3,26 @@ import type { NavigationModel } from "@/types/models";
 export const navigation: NavigationModel[] = [
   {
     id: "home",
-    href: "#top",
+    href: "#home",
   },
   {
     id: "about",
-    href: "#sobre",
+    href: "#about",
   },
   {
     id: "skills",
-    href: "#habilidades",
+    href: "#skills",
   },
   {
     id: "projects",
-    href: "#projetos",
+    href: "#projects",
   },
   {
     id: "services",
-    href: "#servicos",
+    href: "#services",
   },
   {
     id: "contact",
-    href: "#contato",
+    href: "#contact",
   },
 ];

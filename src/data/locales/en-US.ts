@@ -312,13 +312,114 @@ export const enUS = {
     },
   },
 
+  privacy: {
+  eyebrow: "Privacy",
+  title: "Privacy Policy",
+  lastUpdatedLabel: "Last updated",
+  lastUpdated: "September 12, 2026",
+
+  introduction: [
+    "This Privacy Policy explains how personal data may be processed when using arthurfranklin.com.br, especially through the contact form.",
+    "Personal data is processed according to the purposes described in this Policy and in accordance with applicable legislation, including the Brazilian General Data Protection Law — LGPD (Law No. 13,709/2018).",
+  ],
+
+  sections: [
+    {
+      title: "Personal data processed",
+      paragraphs: [
+        "When using the contact form, data provided by the visitor may be processed, such as name, email address, phone number when provided, subject, and message content.",
+        "Technical data necessary for the operation and security of the website may also be processed, such as IP address, request information, browser, device, and network traffic data.",
+        "The phone number field is optional.",
+      ],
+    },
+    {
+      title: "Purposes of processing",
+      paragraphs: [
+        "Data is processed to receive and respond to messages sent by visitors, enable the operation of the contact form, and protect the website against spam, abusive automation, fraud, and other improper use.",
+        "Data may also be used when necessary for application security, troubleshooting, compliance with legal or regulatory obligations, and the exercise or defense of rights.",
+        "Submitting the contact form does not represent authorization to use the data for purposes incompatible with those described in this Policy.",
+      ],
+    },
+    {
+      title: "Third-party services",
+      paragraphs: [
+        "Cloudflare — provides services related to website infrastructure, delivery, and protection. Cloudflare Turnstile is used in the contact form to help prevent automated and abusive submissions.",
+        "Resend — used to deliver messages submitted through the contact form to the destination email address. Data provided in the form may be processed during this operation.",
+        "Apple — used to receive and manage messages forwarded through the contact form.",
+        "These providers have their own privacy policies and practices applicable to the services they provide.",
+      ],
+    },
+    {
+      title: "International data transfers",
+      paragraphs: [
+        "Some of the providers used have international infrastructure and operations. As a result, certain data may be processed outside Brazil.",
+        "Cloudflare states that it stores information primarily in the United States and the European Economic Area and may perform international transfers and access.",
+        "Resend states that data provided from other countries may be transferred to the United States and processed there.",
+        "Where applicable, international transfers must comply with the requirements established by Brazilian data protection legislation.",
+      ],
+    },
+    {
+      title: "Storage and security",
+      paragraphs: [
+        "Data will be retained for the period necessary to fulfill the purposes described in this Policy or while there is a legitimate basis or applicable obligation requiring its retention.",
+        "Technical and administrative measures are adopted to reduce the risks of unauthorized access, loss, alteration, disclosure, or improper use of data.",
+        "No system connected to the Internet can guarantee absolute protection against all security risks.",
+      ],
+    },
+    {
+      title: "Data sharing",
+      paragraphs: [
+        "Personal data processed through the website is not sold.",
+        "Data may be processed or shared with the providers mentioned in this Policy when necessary to operate the website, deliver messages, protect the infrastructure, or comply with legal obligations.",
+        "Data may also be disclosed when required by a valid order from a competent authority or when necessary for the exercise or defense of rights.",
+      ],
+    },
+    {
+      title: "Data subject rights",
+      paragraphs: [
+        "Under the LGPD, data subjects may exercise the rights applicable to the processing of their personal data.",
+      ],
+      items: [
+        "confirmation of whether processing exists;",
+        "access to personal data;",
+        "correction of incomplete, inaccurate, or outdated data;",
+        "anonymization, blocking, or deletion in the cases provided by law;",
+        "information about data sharing;",
+        "data portability, where applicable;",
+        "objection to processing in the cases provided by law;",
+        "withdrawal of consent when consent is the legal basis used;",
+        "other rights provided by applicable legislation.",
+      ],
+    },
+    {
+      title: "Cookies and similar technologies",
+      paragraphs: [
+        "The website may use technologies necessary for its operation, security, and storage of preferences.",
+        "When non-essential technologies that depend on the visitor's choice are used, they must respect the preferences defined through the mechanisms made available on the website.",
+        "More information about the technologies actually used and their purposes will be available in the Cookie Policy.",
+      ],
+    },
+    {
+      title: "Controller, contact, and changes",
+      paragraphs: [
+        "The person responsible for decisions regarding the processing of personal data carried out through this website is Arthur Franklin.",
+        "Requests related to privacy or the exercise of rights may be sent to arthur@arthurfranklin.com.br.",
+        "This Policy may be updated to reflect changes to website features, services used, processing practices, or applicable legislation. The current version will remain available on this page together with the date of its latest update.",
+      ],
+    },
+  ],
+},
+
   footer: {
-    description: "Turning challenges into practical IT solutions.",
     role: "arthurfranklin.com.br",
     navigationTitle: "Navigation",
     contactTitle: "Contact",
     socialTitle: "Social Links",
     websiteLabel: "Website",
+    legalTitle: "Legal",
+    privacyPolicy: "Privacy Policy",
+    termsOfUse: "Terms of Use",
+    cookiePreferences: "Cookie Preferences",
     copyright: "Arthur Franklin. All rights reserved.",
     signature: "Built using modern software engineering practices.",
     backToTop: "Back to top",

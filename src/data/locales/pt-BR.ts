@@ -283,13 +283,114 @@ export const ptBR = {
     },
   },
 
+  privacy: {
+  eyebrow: "Privacidade",
+  title: "Política de Privacidade",
+  lastUpdatedLabel: "Última atualização",
+  lastUpdated: "12 de setembro de 2026",
+
+  introduction: [
+    "Esta Política de Privacidade explica como os dados pessoais podem ser tratados durante a utilização do site arthurfranklin.com.br, especialmente por meio do formulário de contato.",
+    "O tratamento de dados pessoais é realizado de acordo com as finalidades descritas nesta Política e observa a legislação aplicável, incluindo a Lei Geral de Proteção de Dados Pessoais — LGPD (Lei nº 13.709/2018).",
+  ],
+
+  sections: [
+    {
+      title: "Dados pessoais tratados",
+      paragraphs: [
+        "Ao utilizar o formulário de contato, poderão ser tratados os dados fornecidos pelo visitante, como nome, endereço de e-mail, telefone quando informado, assunto e conteúdo da mensagem.",
+        "Também poderão ser processados dados técnicos necessários ao funcionamento e à segurança do site, como endereço IP, informações sobre a requisição, navegador, dispositivo e tráfego de rede.",
+        "O campo de telefone é opcional.",
+      ],
+    },
+    {
+      title: "Finalidades do tratamento",
+      paragraphs: [
+        "Os dados são tratados para receber e responder às mensagens enviadas pelo visitante, possibilitar o funcionamento do formulário e proteger o site contra spam, automações abusivas, fraude e outras utilizações indevidas.",
+        "Também poderão ser utilizados quando necessário para segurança da aplicação, diagnóstico de falhas, cumprimento de obrigações legais ou regulatórias e exercício ou defesa de direitos.",
+        "O envio do formulário não representa autorização para utilização dos dados para finalidades incompatíveis com aquelas descritas nesta Política.",
+      ],
+    },
+    {
+      title: "Serviços de terceiros",
+      paragraphs: [
+        "Cloudflare — fornece serviços relacionados à infraestrutura, entrega e proteção do site. O Cloudflare Turnstile é utilizado no formulário para auxiliar na prevenção de submissões automatizadas e abusivas.",
+        "Resend — utilizado para entregar as mensagens enviadas pelo formulário ao endereço de e-mail de destino. Os dados fornecidos no formulário podem ser processados durante essa operação.",
+        "Apple — utilizado para receber e gerenciar as mensagens encaminhadas pelo formulário.",
+        "Esses fornecedores possuem suas próprias políticas e práticas de privacidade aplicáveis aos serviços que prestam.",
+      ],
+    },
+    {
+      title: "Transferências internacionais",
+      paragraphs: [
+        "Alguns dos fornecedores utilizados possuem infraestrutura e operações internacionais. Por isso, determinados dados poderão ser processados fora do Brasil.",
+        "A Cloudflare informa que armazena informações principalmente nos Estados Unidos e no Espaço Econômico Europeu, podendo realizar transferências e acessos internacionais.",
+        "O Resend informa que dados fornecidos a partir de outros países podem ser transferidos para os Estados Unidos e processados naquele país.",
+        "Quando aplicável, as transferências internacionais deverão observar os requisitos previstos na legislação brasileira de proteção de dados.",
+      ],
+    },
+    {
+      title: "Armazenamento e segurança",
+      paragraphs: [
+        "Os dados serão mantidos pelo período necessário para atender às finalidades descritas nesta Política ou enquanto houver fundamento legítimo ou obrigação aplicável para sua conservação.",
+        "São adotadas medidas técnicas e administrativas destinadas a reduzir riscos de acesso não autorizado, perda, alteração, divulgação ou utilização indevida dos dados.",
+        "Nenhum sistema conectado à Internet pode garantir proteção absoluta contra todos os riscos de segurança.",
+      ],
+    },
+    {
+      title: "Compartilhamento de dados",
+      paragraphs: [
+        "Os dados pessoais tratados pelo site não são comercializados.",
+        "Eles poderão ser processados ou compartilhados com os fornecedores mencionados nesta Política quando isso for necessário para operar o site, entregar as mensagens, proteger a infraestrutura ou cumprir obrigações legais.",
+        "Também poderão ser divulgados quando exigido por determinação válida de autoridade competente ou quando necessário ao exercício ou defesa de direitos.",
+      ],
+    },
+    {
+      title: "Direitos do titular",
+      paragraphs: [
+        "Nos termos da LGPD, o titular poderá exercer os direitos aplicáveis ao tratamento de seus dados pessoais.",
+      ],
+      items: [
+        "confirmação da existência de tratamento;",
+        "acesso aos seus dados;",
+        "correção de dados incompletos, inexatos ou desatualizados;",
+        "anonimização, bloqueio ou eliminação nas hipóteses previstas em lei;",
+        "informações sobre o compartilhamento de dados;",
+        "portabilidade, quando aplicável;",
+        "oposição ao tratamento nas hipóteses previstas em lei;",
+        "revogação do consentimento, quando essa for a base legal utilizada;",
+        "demais direitos previstos na legislação aplicável.",
+      ],
+    },
+    {
+      title: "Cookies e tecnologias semelhantes",
+      paragraphs: [
+        "O site poderá utilizar tecnologias necessárias ao seu funcionamento, segurança e armazenamento de preferências.",
+        "Quando forem utilizadas tecnologias não essenciais que dependam da escolha do visitante, elas deverão respeitar as preferências definidas por meio dos mecanismos disponibilizados no site.",
+        "Mais informações sobre as tecnologias efetivamente utilizadas e suas finalidades estarão disponíveis na Política de Cookies.",
+      ],
+    },
+    {
+      title: "Responsável, contato e alterações",
+      paragraphs: [
+        "O responsável pelas decisões relacionadas ao tratamento de dados pessoais realizado por meio deste site é Arthur Franklin.",
+        "Solicitações relacionadas à privacidade ou ao exercício de direitos podem ser encaminhadas para arthur@arthurfranklin.com.br.",
+        "Esta Política poderá ser atualizada para refletir alterações nas funcionalidades do site, nos serviços utilizados, nas práticas de tratamento ou na legislação aplicável. A versão vigente permanecerá disponível nesta página, acompanhada da data de sua última atualização.",
+      ],
+    },
+  ],
+},
+
   footer: {
-    description: "Transformando desafios em soluções práticas para TI.",
     role: "arthurfranklin.com.br",
     navigationTitle: "Navegação",
     contactTitle: "Contato",
     socialTitle: "Redes Sociais",
     websiteLabel: "Website",
+    legalTitle: "Legal",
+    privacyPolicy: "Política de Privacidade",
+    termsOfUse: "Termos de Uso",
+    cookiePreferences: "Preferências de Cookies",
     copyright: "Arthur Franklin. Todos os direitos reservados.",
     signature: "Desenvolvido com as melhores práticas de engenharia de software.",
     backToTop: "Voltar ao topo",

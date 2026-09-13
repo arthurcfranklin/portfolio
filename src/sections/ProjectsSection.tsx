@@ -11,7 +11,7 @@ export function ProjectsSection() {
 
   return (
     <section
-      id="projetos"
+      id="projects"
       className="section-pad flex min-h-[calc(100vh-4rem)] scroll-mt-16 items-center"
     >
       <div className="container-pro w-full">

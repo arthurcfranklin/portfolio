@@ -167,16 +167,35 @@ export type PortfolioLocale = {
     form: ContactFormLocale;
   };
 
+  privacy: PrivacyLocale;
   footer: {
-    description: string;
     navigationTitle: string;
     contactTitle: string;
+    legalTitle: string;
     socialTitle: string;
     websiteLabel: string;
+    privacyPolicy: string;
+    termsOfUse: string;
+    cookiePreferences: string;
     copyright: string;
     role: string;
     signature: string;
     backToTop: string;
     backToTopAriaLabel: string;
   };
+};
+
+export type LegalSectionLocale = {
+  title: string;
+  paragraphs?: string[];
+  items?: string[];
+};
+
+export type PrivacyLocale = {
+  eyebrow: string;
+  title: string;
+  lastUpdatedLabel: string;
+  lastUpdated: string;
+  introduction: string[];
+  sections: LegalSectionLocale[];
 };

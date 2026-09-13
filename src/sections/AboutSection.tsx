@@ -11,7 +11,7 @@ export function AboutSection() {
 
   return (
     <section
-      id="sobre"
+      id="about"
       className="section-pad flex min-h-[calc(100vh-4rem)] scroll-mt-16 items-center"
     >
       <div className="container-pro w-full">

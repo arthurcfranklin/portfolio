@@ -8,12 +8,12 @@ import { useLocale } from "@/hooks/useLocale";
 export function Header() {
   const locale = useLocale();
 
-  const [activeSection, setActiveSection] = useState("top");
+  const [activeSection, setActiveSection] = useState("home");
 
   const fullName = `${locale.hero.firstName} ${locale.hero.lastName}`;
 
   useEffect(() => {
-    const sectionIds = ["top", ...navigation.map((item) => item.href.replace("#", ""))];
+    const sectionIds = navigation.map((item) => item.href.replace("#", ""));
 
     const sections = sectionIds
       .map((id) => document.getElementById(id))
@@ -57,9 +57,9 @@ export function Header() {
         "
       >
         <a
-          href="#top"
+          href="#home"
           className="flex min-w-0 items-center gap-3 justify-self-start"
-          onClick={() => setActiveSection("top")}
+          onClick={() => setActiveSection("home")}
         >
           <img
             src="/favicon-192x192.png"
@@ -108,8 +108,8 @@ export function Header() {
           <LanguageToggle />
 
           <a
-            href="#contato"
-            onClick={() => setActiveSection("contato")}
+            href="#contact"
+            onClick={() => setActiveSection("contact")}
             className="btn-secondary !h-9 w-[164px] justify-center !text-sm"
           >
             <span className="hidden sm:inline">{locale.header.contactButton}</span>

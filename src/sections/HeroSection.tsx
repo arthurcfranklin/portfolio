@@ -32,7 +32,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="top" className="relative flex min-h-[calc(100vh-4rem)] items-center pb-24 pt-16">
+    <section id="home" className="relative flex min-h-[calc(100vh-4rem)] items-center pb-24 pt-16">
       <div className="container-pro w-full">
         <motion.div
           className="mx-auto flex max-w-5xl flex-col items-center text-center"
@@ -74,7 +74,7 @@ export function HeroSection() {
               <ArrowRight className="h-4 w-4" />
             </a>
 
-            <a href="#projetos" className="btn-secondary">
+            <a href="#projects" className="btn-secondary">
               {locale.hero.projectsButton}
               <ArrowRight className="h-4 w-4" />
             </a>
