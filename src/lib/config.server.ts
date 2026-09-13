@@ -20,5 +20,6 @@ export function getServerConfig() {
   return {
     nodeEnv: process.env.NODE_ENV,
     turnstileSecretKey: process.env.TURNSTILE_SECRET_KEY,
+    resendApiKey: process.env.RESEND_API_KEY,
   };
 }
