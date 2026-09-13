@@ -169,6 +169,8 @@ export type PortfolioLocale = {
 
   privacy: PrivacyLocale;
   terms: TermsLocale;
+  cookies: CookiesLocale;
+  consent: ConsentLocale;
   footer: {
     navigationTitle: string;
     contactTitle: string;
@@ -177,6 +179,7 @@ export type PortfolioLocale = {
     websiteLabel: string;
     privacyPolicy: string;
     termsOfUse: string;
+    cookiePolicy: string;
     cookiePreferences: string;
     copyright: string;
     role: string;
@@ -202,6 +205,48 @@ export type PrivacyLocale = {
 };
 
 export type TermsLocale = {
+  eyebrow: string;
+  title: string;
+  lastUpdatedLabel: string;
+  lastUpdated: string;
+  introduction: string[];
+  sections: LegalSectionLocale[];
+};
+
+export type ConsentLocale = {
+  banner: {
+    ariaLabel: string;
+    title: string;
+    descriptionLine1: string;
+    descriptionLine2: string;
+    accept: string;
+    reject: string;
+    customize: string;
+  };
+
+  preferences: {
+    title: string;
+    descriptionLines: string[];
+    closeLabel: string;
+
+    necessary: {
+      title: string;
+      status: string;
+      descriptionLines: string[];
+    };
+
+    analytics: {
+      title: string;
+      descriptionLines: string[];
+      switchLabel: string;
+    };
+
+    cancel: string;
+    save: string;
+  };
+};
+
+export type CookiesLocale = {
   eyebrow: string;
   title: string;
   lastUpdatedLabel: string;

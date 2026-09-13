@@ -454,6 +454,134 @@ export const ptBR = {
     ],
   },
 
+    consent: {
+      banner: {
+        ariaLabel: "Preferências de cookies",
+        title: "Privacidade e Preferências",
+        descriptionLine1:
+          "Usamos tecnologias necessárias para preferências e segurança.",
+        descriptionLine2:
+          "Recursos opcionais dependem da sua autorização.",
+        accept: "Aceitar",
+        reject: "Negar",
+        customize: "Personalizar",
+      },
+      preferences: {
+        title: "Preferências de Cookies",
+        descriptionLines: [
+          "Escolha quais tecnologias opcionais",
+          "podem ser utilizadas neste site.",
+        ],
+        closeLabel: "Fechar preferências",
+
+        necessary: {
+          title: "Necessários",
+          status: "Sempre ativos",
+          descriptionLines: [
+            "Mantêm preferências essenciais,",
+            "segurança e funcionamento do site.",
+          ],
+        },
+
+        analytics: {
+          title: "Análise e métricas",
+          descriptionLines: [
+            "Permitem métricas opcionais de",
+            "utilização quando disponíveis.",
+          ],
+          switchLabel: "Permitir análise e métricas",
+        },
+
+        cancel: "Cancelar",
+        save: "Salvar preferências",
+      },
+    },
+
+      cookies: {
+    eyebrow: "Legal",
+    title: "Política de Cookies",
+    lastUpdatedLabel: "Última atualização",
+    lastUpdated: "13 de setembro de 2026",
+
+    introduction: [
+      "Esta Política de Cookies explica como o site arthurfranklin.com.br utiliza cookies, armazenamento local e tecnologias semelhantes para funcionamento, preferências e segurança.",
+      "Atualmente, o site não utiliza ferramentas de análise, publicidade comportamental ou rastreamento não essencial. Caso isso mude, esta política e o mecanismo de preferências serão atualizados antes da ativação dessas tecnologias.",
+    ],
+
+    sections: [
+      {
+        title: "O que são cookies e tecnologias semelhantes",
+        paragraphs: [
+          "Cookies são pequenos arquivos que podem ser armazenados pelo navegador durante a utilização de um site. Tecnologias semelhantes, como o armazenamento local do navegador, também podem conservar determinadas informações entre acessos.",
+          "Neste site, algumas preferências são armazenadas localmente para preservar configurações escolhidas pelo visitante e garantir uma experiência consistente.",
+        ],
+      },
+      {
+        title: "Tecnologias utilizadas atualmente",
+        paragraphs: [
+          "O site utiliza armazenamento local do navegador para registrar preferências de idioma, tema visual e escolhas relacionadas ao consentimento.",
+          "Essas informações permanecem no dispositivo e no navegador utilizado até que sejam alteradas ou removidas pelo próprio usuário.",
+        ],
+        items: [
+          "portfolio-language: registra o idioma selecionado.",
+          "portfolio-theme: registra a preferência de tema claro, escuro ou do sistema.",
+          "portfolio-cookie-consent: registra a escolha sobre tecnologias opcionais e a versão da preferência salva.",
+        ],
+      },
+      {
+        title: "Tecnologias necessárias",
+        paragraphs: [
+          "Tecnologias necessárias são utilizadas para funcionalidades essenciais, preferências solicitadas pelo usuário, segurança e funcionamento adequado do site.",
+          "Essas tecnologias não são utilizadas para publicidade comportamental ou criação de perfis de navegação.",
+        ],
+      },
+      {
+        title: "Segurança e Cloudflare Turnstile",
+        paragraphs: [
+          "O formulário de contato utiliza Cloudflare Turnstile como mecanismo de proteção contra abuso, spam e tráfego automatizado.",
+          "Durante essa verificação, a Cloudflare pode tratar informações técnicas necessárias para avaliar a legitimidade da interação, de acordo com seus próprios termos e políticas aplicáveis.",
+        ],
+      },
+      {
+        title: "Análise e métricas",
+        paragraphs: [
+          "O site não utiliza atualmente ferramentas opcionais de análise ou métricas que dependam de consentimento.",
+          "A categoria de análise e métricas disponível nas preferências existe para permitir uma implementação futura compatível com a escolha do usuário. Nenhuma ferramenta dessa categoria é carregada atualmente.",
+        ],
+      },
+      {
+        title: "Gerenciamento das preferências",
+        paragraphs: [
+          "Na primeira visita, o usuário pode aceitar tecnologias opcionais, recusá-las ou personalizar sua preferência.",
+          "A escolha pode ser revisada posteriormente por meio do botão flutuante de Preferências de Cookies disponível no site.",
+          "As tecnologias necessárias permanecem ativas porque são utilizadas para funcionalidades, preferências e mecanismos de segurança essenciais.",
+        ],
+      },
+      {
+        title: "Como remover os dados armazenados",
+        paragraphs: [
+          "O usuário pode remover dados armazenados localmente utilizando os controles de privacidade e armazenamento disponibilizados pelo próprio navegador.",
+          "A exclusão dessas informações pode redefinir preferências como idioma, tema e escolha de consentimento, fazendo com que sejam solicitadas novamente em um acesso posterior.",
+        ],
+      },
+      {
+        title: "Serviços de terceiros",
+        paragraphs: [
+          "Determinados recursos de segurança e infraestrutura podem ser fornecidos por terceiros, incluindo a Cloudflare. Esses fornecedores podem tratar dados técnicos necessários para a prestação de seus serviços conforme suas próprias políticas de privacidade.",
+          "Informações adicionais sobre o tratamento geral de dados pessoais pelo site estão disponíveis na Política de Privacidade.",
+        ],
+      },
+      {
+        title: "Alterações desta política",
+        paragraphs: [
+          "Esta Política de Cookies poderá ser atualizada caso sejam adicionadas, removidas ou modificadas tecnologias utilizadas pelo site.",
+          "Quando uma alteração afetar categorias opcionais ou escolhas já realizadas, o mecanismo de consentimento poderá solicitar uma nova decisão.",
+          "Dúvidas sobre esta política podem ser encaminhadas para arthur@arthurfranklin.com.br.",
+        ],
+      },
+    ],
+  },
+
   footer: {
     role: "arthurfranklin.com.br",
     navigationTitle: "Navegação",
@@ -463,6 +591,7 @@ export const ptBR = {
     legalTitle: "Legal",
     privacyPolicy: "Política de Privacidade",
     termsOfUse: "Termos de Uso",
+    cookiePolicy: "Política de Cookies",
     cookiePreferences: "Preferências de Cookies",
     copyright: "Arthur Franklin. Todos os direitos reservados.",
     signature: "Desenvolvido com as melhores práticas de engenharia de software.",

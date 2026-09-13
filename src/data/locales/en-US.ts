@@ -483,6 +483,135 @@ export const enUS = {
   ],
 },
 
+  consent: {
+    banner: {
+      ariaLabel: "Cookie preferences",
+      title: "Privacy and Preferences",
+      descriptionLine1:
+        "We use necessary technologies for preferences and security.",
+      descriptionLine2:
+        "Optional features require your permission.",
+      accept: "Accept",
+      reject: "Reject",
+      customize: "Customize",
+    },
+
+    preferences: {
+      title: "Cookie Preferences",
+      descriptionLines: [
+        "Choose which optional technologies may be",
+        "used on this website.",
+      ],
+      closeLabel: "Close preferences",
+
+      necessary: {
+        title: "Necessary",
+        status: "Always active",
+        descriptionLines: [
+          "Maintain essential preferences, security,",
+          "and website functionality.",
+        ],
+      },
+
+      analytics: {
+        title: "Analytics and metrics",
+        descriptionLines: [
+          "Allow optional usage metrics",
+          "when available.",
+        ],
+        switchLabel: "Allow analytics and metrics",
+      },
+
+      cancel: "Cancel",
+      save: "Save preferences",
+    },
+  },
+
+  cookies: {
+  eyebrow: "Legal",
+  title: "Cookie Policy",
+  lastUpdatedLabel: "Last updated",
+  lastUpdated: "September 13, 2026",
+
+  introduction: [
+    "This Cookie Policy explains how arthurfranklin.com.br uses cookies, local storage, and similar technologies for functionality, preferences, and security.",
+    "The website currently does not use analytics, behavioral advertising, or other non-essential tracking tools. If this changes, this policy and the preference mechanism will be updated before those technologies are enabled.",
+  ],
+
+  sections: [
+    {
+      title: "What cookies and similar technologies are",
+      paragraphs: [
+        "Cookies are small files that may be stored by a browser while a website is being used. Similar technologies, such as browser local storage, can also retain certain information between visits.",
+        "On this website, some preferences are stored locally to preserve choices made by the visitor and provide a consistent experience.",
+      ],
+    },
+    {
+      title: "Technologies currently used",
+      paragraphs: [
+        "The website uses browser local storage to save language, visual theme, and consent-related preferences.",
+        "This information remains on the device and browser being used until it is changed or removed by the user.",
+      ],
+      items: [
+        "portfolio-language: stores the selected language.",
+        "portfolio-theme: stores the light, dark, or system theme preference.",
+        "portfolio-cookie-consent: stores the choice regarding optional technologies and the saved preference version.",
+      ],
+    },
+    {
+      title: "Necessary technologies",
+      paragraphs: [
+        "Necessary technologies are used for essential functionality, user-requested preferences, security, and proper website operation.",
+        "These technologies are not used for behavioral advertising or browsing profiles.",
+      ],
+    },
+    {
+      title: "Security and Cloudflare Turnstile",
+      paragraphs: [
+        "The contact form uses Cloudflare Turnstile to help protect against abuse, spam, and automated traffic.",
+        "During this verification, Cloudflare may process technical information required to assess the legitimacy of the interaction in accordance with its applicable terms and policies.",
+      ],
+    },
+    {
+      title: "Analytics and metrics",
+      paragraphs: [
+        "The website currently does not use optional analytics or metrics tools that depend on consent.",
+        "The analytics and metrics category available in the preferences exists to support a future implementation that respects the user's choice. No technology in this category is currently loaded.",
+      ],
+    },
+    {
+      title: "Managing preferences",
+      paragraphs: [
+        "On the first visit, users may accept optional technologies, reject them, or customize their preferences.",
+        "The choice can later be reviewed through the floating Cookie Preferences button available on the website.",
+        "Necessary technologies remain active because they support essential functionality, preferences, and security mechanisms.",
+      ],
+    },
+    {
+      title: "Removing stored data",
+      paragraphs: [
+        "Users may remove locally stored data through the privacy and storage controls provided by their browser.",
+        "Removing this information may reset preferences such as language, theme, and consent choice, causing them to be requested again on a later visit.",
+      ],
+    },
+    {
+      title: "Third-party services",
+      paragraphs: [
+        "Certain security and infrastructure features may be provided by third parties, including Cloudflare. These providers may process technical data required to provide their services according to their own privacy policies.",
+        "Additional information about the website's general processing of personal data is available in the Privacy Policy.",
+      ],
+    },
+    {
+      title: "Changes to this policy",
+      paragraphs: [
+        "This Cookie Policy may be updated when technologies used by the website are added, removed, or modified.",
+        "When a change affects optional categories or previously recorded choices, the consent mechanism may request a new decision.",
+        "Questions about this policy may be sent to arthur@arthurfranklin.com.br.",
+      ],
+    },
+  ],
+},
+
   footer: {
     role: "arthurfranklin.com.br",
     navigationTitle: "Navigation",
@@ -492,6 +621,7 @@ export const enUS = {
     legalTitle: "Legal",
     privacyPolicy: "Privacy Policy",
     termsOfUse: "Terms of Use",
+    cookiePolicy: "Cookie Policy",
     cookiePreferences: "Cookie Preferences",
     copyright: "Arthur Franklin. All rights reserved.",
     signature: "Built using modern software engineering practices.",

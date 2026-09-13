@@ -12,6 +12,10 @@ import type { ReactNode } from "react";
 
 import { HashScrollRestorer } from "@/components/layout/HashScrollRestorer";
 import { PreferencesProvider } from "@/context/PreferencesProvider";
+import { ConsentProvider } from "@/context/ConsentContext";
+import { ConsentBanner } from "@/components/legal/ConsentBanner";
+import { ConsentPreferences } from "@/components/legal/ConsentPreferences";
+import { ConsentFloatingButton } from "@/components/legal/ConsentFloatingButton";
 import { ptBR } from "@/data/locales/pt-BR";
 import {
   defaultLocale,
@@ -206,12 +210,17 @@ function RootComponent() {
 
   return (
     <PreferencesProvider>
+      <ConsentProvider>
       <QueryClientProvider client={queryClient}>
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <HashScrollRestorer />
 
         <Outlet />
       </QueryClientProvider>
+
+      <ConsentBanner />
+      <ConsentPreferences />
+      <ConsentFloatingButton />
+    </ConsentProvider>
     </PreferencesProvider>
   );
 }

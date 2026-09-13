@@ -510,6 +510,135 @@ export const esES: PortfolioLocale = {
   ],
 },
 
+  consent: {
+  banner: {
+    ariaLabel: "Preferencias de cookies",
+    title: "Privacidad y Preferencias",
+    descriptionLine1:
+      "Utilizamos tecnologías necesarias para preferencias y seguridad.",
+    descriptionLine2:
+      "Las funciones opcionales requieren tu autorización.",
+    accept: "Aceptar",
+    reject: "Rechazar",
+    customize: "Personalizar",
+  },
+
+  preferences: {
+    title: "Preferencias de Cookies",
+    descriptionLines: [
+      "Elige qué tecnologías opcionales pueden",
+      "utilizarse en este sitio.",
+    ],
+    closeLabel: "Cerrar preferencias",
+
+    necessary: {
+      title: "Necesarias",
+      status: "Siempre activas",
+      descriptionLines: [
+        "Mantienen las preferencias esenciales,",
+        "la seguridad y el funcionamiento del sitio.",
+      ],
+    },
+
+    analytics: {
+      title: "Análisis y métricas",
+      descriptionLines: [
+        "Permiten métricas opcionales de uso",
+        "cuando estén disponibles.",
+      ],
+      switchLabel: "Permitir análisis y métricas",
+    },
+
+    cancel: "Cancelar",
+    save: "Guardar preferencias",
+  },
+},
+
+  cookies: {
+  eyebrow: "Legal",
+  title: "Política de Cookies",
+  lastUpdatedLabel: "Última actualización",
+  lastUpdated: "13 de septiembre de 2026",
+
+  introduction: [
+    "Esta Política de Cookies explica cómo arthurfranklin.com.br utiliza cookies, almacenamiento local y tecnologías similares para el funcionamiento, las preferencias y la seguridad.",
+    "Actualmente, el sitio no utiliza herramientas de análisis, publicidad conductual ni otros mecanismos de seguimiento no esenciales. Si esto cambia, esta política y el mecanismo de preferencias se actualizarán antes de activar dichas tecnologías.",
+  ],
+
+  sections: [
+    {
+      title: "Qué son las cookies y tecnologías similares",
+      paragraphs: [
+        "Las cookies son pequeños archivos que el navegador puede almacenar durante el uso de un sitio web. Tecnologías similares, como el almacenamiento local del navegador, también pueden conservar determinada información entre visitas.",
+        "En este sitio, algunas preferencias se almacenan localmente para conservar las elecciones del visitante y ofrecer una experiencia coherente.",
+      ],
+    },
+    {
+      title: "Tecnologías utilizadas actualmente",
+      paragraphs: [
+        "El sitio utiliza el almacenamiento local del navegador para registrar las preferencias de idioma, tema visual y consentimiento.",
+        "Esta información permanece en el dispositivo y navegador utilizados hasta que el propio usuario la modifique o elimine.",
+      ],
+      items: [
+        "portfolio-language: almacena el idioma seleccionado.",
+        "portfolio-theme: almacena la preferencia de tema claro, oscuro o del sistema.",
+        "portfolio-cookie-consent: almacena la elección sobre tecnologías opcionales y la versión de la preferencia guardada.",
+      ],
+    },
+    {
+      title: "Tecnologías necesarias",
+      paragraphs: [
+        "Las tecnologías necesarias se utilizan para funciones esenciales, preferencias solicitadas por el usuario, seguridad y correcto funcionamiento del sitio.",
+        "Estas tecnologías no se utilizan para publicidad conductual ni para crear perfiles de navegación.",
+      ],
+    },
+    {
+      title: "Seguridad y Cloudflare Turnstile",
+      paragraphs: [
+        "El formulario de contacto utiliza Cloudflare Turnstile como mecanismo de protección contra abuso, spam y tráfico automatizado.",
+        "Durante esta verificación, Cloudflare puede tratar información técnica necesaria para evaluar la legitimidad de la interacción de acuerdo con sus propios términos y políticas aplicables.",
+      ],
+    },
+    {
+      title: "Análisis y métricas",
+      paragraphs: [
+        "Actualmente, el sitio no utiliza herramientas opcionales de análisis o métricas que dependan del consentimiento.",
+        "La categoría de análisis y métricas disponible en las preferencias existe para permitir una implementación futura compatible con la elección del usuario. Actualmente no se carga ninguna tecnología de esta categoría.",
+      ],
+    },
+    {
+      title: "Gestión de preferencias",
+      paragraphs: [
+        "En la primera visita, el usuario puede aceptar las tecnologías opcionales, rechazarlas o personalizar sus preferencias.",
+        "La elección puede revisarse posteriormente mediante el botón flotante de Preferencias de Cookies disponible en el sitio.",
+        "Las tecnologías necesarias permanecen activas porque se utilizan para funciones, preferencias y mecanismos de seguridad esenciales.",
+      ],
+    },
+    {
+      title: "Cómo eliminar los datos almacenados",
+      paragraphs: [
+        "El usuario puede eliminar los datos almacenados localmente mediante los controles de privacidad y almacenamiento proporcionados por su navegador.",
+        "La eliminación de esta información puede restablecer preferencias como idioma, tema y consentimiento, haciendo que vuelvan a solicitarse en una visita posterior.",
+      ],
+    },
+    {
+      title: "Servicios de terceros",
+      paragraphs: [
+        "Determinadas funciones de seguridad e infraestructura pueden ser proporcionadas por terceros, incluida Cloudflare. Estos proveedores pueden tratar los datos técnicos necesarios para prestar sus servicios según sus propias políticas de privacidad.",
+        "La Política de Privacidad contiene información adicional sobre el tratamiento general de datos personales realizado por el sitio.",
+      ],
+    },
+    {
+      title: "Cambios en esta política",
+      paragraphs: [
+        "Esta Política de Cookies podrá actualizarse cuando se añadan, eliminen o modifiquen tecnologías utilizadas por el sitio.",
+        "Cuando un cambio afecte a categorías opcionales o a elecciones previamente registradas, el mecanismo de consentimiento podrá solicitar una nueva decisión.",
+        "Las dudas sobre esta política pueden enviarse a arthur@arthurfranklin.com.br.",
+      ],
+    },
+  ],
+},
+
   footer: {
     role: "arthurfranklin.com.br",
     navigationTitle: "Navegación",
@@ -518,6 +647,7 @@ export const esES: PortfolioLocale = {
     legalTitle: "Legal",
     privacyPolicy: "Política de Privacidad",
     termsOfUse: "Términos de Uso",
+    cookiePolicy: "Política de Cookies",
     cookiePreferences: "Preferencias de Cookies",
     websiteLabel: "Sitio web",
     copyright: "Arthur Franklin. Todos los derechos reservados.",
