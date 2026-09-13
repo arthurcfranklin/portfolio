@@ -50,7 +50,7 @@ export function HeroSection() {
 
           <motion.p
             variants={itemVariants}
-            className="mt-5 text-xl font-medium text-foreground/85 md:text-[1.55rem]"
+            className="mt-5 text-xl font-semibold text-foreground/85 md:text-[1.55rem]"
           >
             {locale.hero.roles.map((role, index) => (
               <span key={role}>

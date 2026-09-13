@@ -10,10 +10,10 @@ export function AboutSection() {
   const locale = useLocale();
 
   return (
-    <section
-      id="about"
-      className="section-pad flex min-h-[calc(100vh-4rem)] scroll-mt-16 items-center"
-    >
+      <section
+        id="about"
+        className="section-pad min-h-[calc(100vh-4rem)] scroll-mt-16"
+      >
       <div className="container-pro w-full">
         <div className="grid gap-12 lg:grid-cols-2">
           <Reveal>
