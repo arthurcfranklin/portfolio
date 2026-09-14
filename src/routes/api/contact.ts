@@ -25,8 +25,7 @@ export const Route = createFileRoute("/api/contact")({
           );
         }
 
-        const contentType =
-          request.headers.get("content-type") ?? "";
+        const contentType = request.headers.get("content-type") ?? "";
 
         if (!contentType.includes("application/json")) {
           return Response.json(
@@ -40,13 +39,9 @@ export const Route = createFileRoute("/api/contact")({
           );
         }
 
-        const contentLength =
-          request.headers.get("content-length");
+        const contentLength = request.headers.get("content-length");
 
-        if (
-          contentLength &&
-          Number(contentLength) > MAX_BODY_SIZE
-        ) {
+        if (contentLength && Number(contentLength) > MAX_BODY_SIZE) {
           return Response.json(
             {
               success: false,
@@ -74,10 +69,7 @@ export const Route = createFileRoute("/api/contact")({
           );
         }
 
-        if (
-          new TextEncoder().encode(rawBody).byteLength >
-          MAX_BODY_SIZE
-        ) {
+        if (new TextEncoder().encode(rawBody).byteLength > MAX_BODY_SIZE) {
           return Response.json(
             {
               success: false,
@@ -105,8 +97,7 @@ export const Route = createFileRoute("/api/contact")({
           );
         }
 
-        const validation =
-          validateContactPayload(payload);
+        const validation = validateContactPayload(payload);
 
         if (!validation.success) {
           return Response.json(
@@ -120,14 +111,11 @@ export const Route = createFileRoute("/api/contact")({
           );
         }
 
-        const turnstileVerification =
-          await verifyTurnstile({
-            token:
-              validation.data.turnstileToken,
-            expectedHostname:
-              new URL(request.url).hostname,
-            expectedAction: "contact",
-          });
+        const turnstileVerification = await verifyTurnstile({
+          token: validation.data.turnstileToken,
+          expectedHostname: new URL(request.url).hostname,
+          expectedAction: "contact",
+        });
 
         if (!turnstileVerification.success) {
           return Response.json(
@@ -141,21 +129,19 @@ export const Route = createFileRoute("/api/contact")({
           );
         }
 
-        const emailResult =
-          await sendContactEmail({
-            name: validation.data.name,
-            email: validation.data.email,
-            phone: validation.data.phone,
-            subject: validation.data.subject,
-            message: validation.data.message,
-          });
+        const emailResult = await sendContactEmail({
+          name: validation.data.name,
+          email: validation.data.email,
+          phone: validation.data.phone,
+          subject: validation.data.subject,
+          message: validation.data.message,
+        });
 
         if (!emailResult.success) {
           return Response.json(
             {
               success: false,
-              error:
-                "Unable to deliver message.",
+              error: "Unable to deliver message.",
             },
             {
               status: 502,

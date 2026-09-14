@@ -102,42 +102,42 @@ export function Footer() {
           </div>
 
           <div>
-        <h4 className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-foreground">
-          {locale.footer.legalTitle}
-        </h4>
+            <h4 className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-foreground">
+              {locale.footer.legalTitle}
+            </h4>
 
-        <ul className="space-y-3 text-sm">
-          <li>
-            <a
-              href="/privacy"
-              className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <FileText className="h-4 w-4 shrink-0 text-accent" />
-              {locale.footer.privacyPolicy}
-            </a>
-          </li>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="/privacy"
+                  className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <FileText className="h-4 w-4 shrink-0 text-accent" />
+                  {locale.footer.privacyPolicy}
+                </a>
+              </li>
 
-          <li>
-            <a
-              href="/terms"
-              className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <ScrollText className="h-4 w-4 shrink-0 text-accent" />
-              {locale.footer.termsOfUse}
-            </a>
-          </li>
+              <li>
+                <a
+                  href="/terms"
+                  className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <ScrollText className="h-4 w-4 shrink-0 text-accent" />
+                  {locale.footer.termsOfUse}
+                </a>
+              </li>
 
-          <li>
-            <a
-              href="/cookies"
-              className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <Cookie className="h-4 w-4 shrink-0 text-accent" />
-              {locale.footer.cookiePolicy}
-            </a>
-          </li>
-        </ul>
-      </div>
+              <li>
+                <a
+                  href="/cookies"
+                  className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <Cookie className="h-4 w-4 shrink-0 text-accent" />
+                  {locale.footer.cookiePolicy}
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <div>
             <h4 className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-foreground">

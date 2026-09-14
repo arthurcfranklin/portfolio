@@ -1,7 +1,4 @@
-import type {
-  ConsentPreferences,
-  ConsentState,
-} from "@/types/consent";
+import type { ConsentPreferences, ConsentState } from "@/types/consent";
 
 const CONSENT_STORAGE_KEY = "portfolio-cookie-consent";
 const CONSENT_VERSION = 1;
@@ -11,9 +8,7 @@ export const defaultConsentPreferences: ConsentPreferences = {
   analytics: false,
 };
 
-export function createConsentState(
-  preferences: ConsentPreferences,
-): ConsentState {
+export function createConsentState(preferences: ConsentPreferences): ConsentState {
   return {
     version: CONSENT_VERSION,
     preferences: {
@@ -30,9 +25,7 @@ export function readConsentState(): ConsentState | null {
   }
 
   try {
-    const storedValue = window.localStorage.getItem(
-      CONSENT_STORAGE_KEY,
-    );
+    const storedValue = window.localStorage.getItem(CONSENT_STORAGE_KEY);
 
     if (!storedValue) {
       return null;
@@ -54,25 +47,17 @@ export function readConsentState(): ConsentState | null {
         necessary: true,
         analytics: parsed.preferences.analytics,
       },
-      updatedAt:
-        typeof parsed.updatedAt === "string"
-          ? parsed.updatedAt
-          : new Date().toISOString(),
+      updatedAt: typeof parsed.updatedAt === "string" ? parsed.updatedAt : new Date().toISOString(),
     };
   } catch {
     return null;
   }
 }
 
-export function writeConsentState(
-  preferences: ConsentPreferences,
-): ConsentState {
+export function writeConsentState(preferences: ConsentPreferences): ConsentState {
   const state = createConsentState(preferences);
 
-  window.localStorage.setItem(
-    CONSENT_STORAGE_KEY,
-    JSON.stringify(state),
-  );
+  window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(state));
 
   return state;
 }

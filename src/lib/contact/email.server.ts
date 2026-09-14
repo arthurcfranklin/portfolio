@@ -10,29 +10,17 @@ type SendContactEmailOptions = {
   message: string;
 };
 
-type SendContactEmailResult =
-  | { success: true }
-  | { success: false };
+type SendContactEmailResult = { success: true } | { success: false };
 
-const CONTACT_FROM =
-  "Portfolio <portfolio@arthurfranklin.com.br>";
+const CONTACT_FROM = "Portfolio <portfolio@arthurfranklin.com.br>";
 
-const CONTACT_TO =
-  "arthur@arthurfranklin.com.br";
+const CONTACT_TO = "arthur@arthurfranklin.com.br";
 
 function normalizeSubject(subject: string) {
-  return subject
-    .replace(/[\r\n]+/g, " ")
-    .trim();
+  return subject.replace(/[\r\n]+/g, " ").trim();
 }
 
-function buildContactEmailText({
-  name,
-  email,
-  phone,
-  subject,
-  message,
-}: SendContactEmailOptions) {
+function buildContactEmailText({ name, email, phone, subject, message }: SendContactEmailOptions) {
   return [
     "Nova mensagem recebida pelo portfólio.",
     "",
@@ -56,9 +44,7 @@ export async function sendContactEmail({
   const { resendApiKey } = getServerConfig();
 
   if (!resendApiKey) {
-    console.error(
-      "RESEND_API_KEY is not configured.",
-    );
+    console.error("RESEND_API_KEY is not configured.");
 
     return { success: false };
   }
@@ -66,37 +52,31 @@ export async function sendContactEmail({
   const resend = new Resend(resendApiKey);
 
   try {
-    const { data, error } =
-      await resend.emails.send({
-        from: CONTACT_FROM,
-        to: [CONTACT_TO],
-        replyTo: email,
-        subject: `[Portfolio] ${normalizeSubject(subject)}`,
-        text: buildContactEmailText({
-          name,
-          email,
-          phone,
-          subject,
-          message,
-        }),
-      });
+    const { data, error } = await resend.emails.send({
+      from: CONTACT_FROM,
+      to: [CONTACT_TO],
+      replyTo: email,
+      subject: `[Portfolio] ${normalizeSubject(subject)}`,
+      text: buildContactEmailText({
+        name,
+        email,
+        phone,
+        subject,
+        message,
+      }),
+    });
 
     if (error) {
-      console.error(
-        "Resend rejected contact email.",
-        {
-          name: error.name,
-          message: error.message,
-        },
-      );
+      console.error("Resend rejected contact email.", {
+        name: error.name,
+        message: error.message,
+      });
 
       return { success: false };
     }
 
     if (!data?.id) {
-      console.error(
-        "Resend returned no email ID.",
-      );
+      console.error("Resend returned no email ID.");
 
       return { success: false };
     }
@@ -105,9 +85,7 @@ export async function sendContactEmail({
   } catch (error) {
     console.error(
       "Contact email delivery failed.",
-      error instanceof Error
-        ? error.message
-        : "Unknown error.",
+      error instanceof Error ? error.message : "Unknown error.",
     );
 
     return { success: false };

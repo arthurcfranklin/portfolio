@@ -9,10 +9,7 @@ export function ContactSection() {
   const locale = useLocale();
 
   return (
-    <section
-      id="contact"
-      className="section-pad min-h-[calc(100vh-4rem)] scroll-mt-16"
-    >
+    <section id="contact" className="section-pad min-h-[calc(100vh-4rem)] scroll-mt-16">
       <div className="container-pro w-full">
         <Reveal>
           <div className="mx-auto mb-10 max-w-4xl text-center">

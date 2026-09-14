@@ -24,9 +24,7 @@ export function Header() {
       return;
     }
 
-    const sectionIds = navigation.map((item) =>
-      item.href.replace("#", ""),
-    );
+    const sectionIds = navigation.map((item) => item.href.replace("#", ""));
 
     const sections = sectionIds
       .map((id) => document.getElementById(id))
@@ -36,10 +34,7 @@ export function Header() {
       (entries) => {
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              b.intersectionRatio - a.intersectionRatio,
-          );
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
         const mostVisibleSection = visibleSections[0];
 
@@ -94,9 +89,7 @@ export function Header() {
           />
 
           <div className="min-w-0 leading-tight">
-            <div className="truncate text-sm font-semibold">
-              {fullName}
-            </div>
+            <div className="truncate text-sm font-semibold">{fullName}</div>
 
             <span className="hidden whitespace-nowrap text-[11px] text-accent/80 xl:block">
               {locale.header.tagline}
@@ -107,17 +100,12 @@ export function Header() {
         <nav className="hidden items-center justify-center gap-5 lg:flex xl:gap-7">
           {navigation.map((item) => {
             const sectionId = item.href.replace("#", "");
-            const isActive =
-              isHome && activeSection === sectionId;
+            const isActive = isHome && activeSection === sectionId;
 
             return (
               <a
                 key={item.id}
-                href={
-                  isHome
-                    ? item.href
-                    : `/${item.href}`
-                }
+                href={isHome ? item.href : `/${item.href}`}
                 onClick={() => {
                   if (isHome) {
                     setActiveSection(sectionId);
@@ -145,11 +133,7 @@ export function Header() {
           <LanguageToggle />
 
           <a
-            href={
-              isHome
-                ? "#contact"
-                : "/#contact"
-            }
+            href={isHome ? "#contact" : "/#contact"}
             onClick={() => {
               if (isHome) {
                 setActiveSection("contact");
@@ -157,13 +141,9 @@ export function Header() {
             }}
             className="btn-secondary !h-9 w-[176px] justify-center whitespace-nowrap !text-sm"
           >
-            <span className="hidden sm:inline">
-              {locale.header.contactButton}
-            </span>
+            <span className="hidden sm:inline">{locale.header.contactButton}</span>
 
-            <span className="sm:hidden">
-              {locale.header.mobileContactButton}
-            </span>
+            <span className="sm:hidden">{locale.header.mobileContactButton}</span>
           </a>
         </div>
       </div>

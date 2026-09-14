@@ -48,25 +48,23 @@ export function validateContactPayload(payload: unknown): ValidationResult {
   const website = normalizeString(payload.website);
   const turnstileToken = normalizeString(payload.turnstileToken);
   const allowedKeys = new Set([
-  "name",
-  "email",
-  "phone",
-  "subject",
-  "message",
-  "website",
-  "turnstileToken",
-]);
+    "name",
+    "email",
+    "phone",
+    "subject",
+    "message",
+    "website",
+    "turnstileToken",
+  ]);
 
-const hasUnexpectedField = Object.keys(payload).some(
-  (key) => !allowedKeys.has(key),
-);
+  const hasUnexpectedField = Object.keys(payload).some((key) => !allowedKeys.has(key));
 
-if (hasUnexpectedField) {
-  return {
-    success: false,
-    error: "Invalid request body.",
-  };
-}
+  if (hasUnexpectedField) {
+    return {
+      success: false,
+      error: "Invalid request body.",
+    };
+  }
 
   if (!name || name.length > 100) {
     return {
@@ -104,18 +102,18 @@ if (hasUnexpectedField) {
   }
 
   if (website) {
-  return {
-    success: false,
-    error: "Invalid request.",
-  };
-}
+    return {
+      success: false,
+      error: "Invalid request.",
+    };
+  }
 
   if (!turnstileToken || turnstileToken.length > 2048) {
-  return {
-    success: false,
-    error: "Invalid verification token.",
-  };
-}
+    return {
+      success: false,
+      error: "Invalid verification token.",
+    };
+  }
 
   return {
     success: true,

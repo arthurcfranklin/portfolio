@@ -8,15 +8,8 @@ import {
   useState,
 } from "react";
 
-import {
-  defaultConsentPreferences,
-  readConsentState,
-  writeConsentState,
-} from "@/lib/consent";
-import type {
-  ConsentPreferences,
-  ConsentState,
-} from "@/types/consent";
+import { defaultConsentPreferences, readConsentState, writeConsentState } from "@/lib/consent";
+import type { ConsentPreferences, ConsentState } from "@/types/consent";
 
 type ConsentContextValue = {
   consent: ConsentState | null;
@@ -26,44 +19,31 @@ type ConsentContextValue = {
   isPreferencesOpen: boolean;
   acceptAll: () => void;
   rejectNonEssential: () => void;
-  savePreferences: (
-    preferences: ConsentPreferences,
-  ) => void;
+  savePreferences: (preferences: ConsentPreferences) => void;
   openPreferences: () => void;
   closePreferences: () => void;
 };
 
-const ConsentContext =
-  createContext<ConsentContextValue | null>(null);
+const ConsentContext = createContext<ConsentContextValue | null>(null);
 
-export function ConsentProvider({
-  children,
-}: {
-  children: ReactNode;
-}) {
-  const [consent, setConsent] =
-    useState<ConsentState | null>(null);
+export function ConsentProvider({ children }: { children: ReactNode }) {
+  const [consent, setConsent] = useState<ConsentState | null>(null);
 
-  const [isHydrated, setIsHydrated] =
-    useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
-  const [isPreferencesOpen, setIsPreferencesOpen] =
-    useState(false);
+  const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
 
   useEffect(() => {
     setConsent(readConsentState());
     setIsHydrated(true);
   }, []);
 
-  const savePreferences = useCallback(
-    (preferences: ConsentPreferences) => {
-      const state = writeConsentState(preferences);
+  const savePreferences = useCallback((preferences: ConsentPreferences) => {
+    const state = writeConsentState(preferences);
 
-      setConsent(state);
-      setIsPreferencesOpen(false);
-    },
-    [],
-  );
+    setConsent(state);
+    setIsPreferencesOpen(false);
+  }, []);
 
   const acceptAll = useCallback(() => {
     savePreferences({
@@ -87,9 +67,7 @@ export function ConsentProvider({
     setIsPreferencesOpen(false);
   }, []);
 
-  const preferences =
-    consent?.preferences ??
-    defaultConsentPreferences;
+  const preferences = consent?.preferences ?? defaultConsentPreferences;
 
   const value = useMemo<ConsentContextValue>(
     () => ({
@@ -117,20 +95,14 @@ export function ConsentProvider({
     ],
   );
 
-  return (
-    <ConsentContext.Provider value={value}>
-      {children}
-    </ConsentContext.Provider>
-  );
+  return <ConsentContext.Provider value={value}>{children}</ConsentContext.Provider>;
 }
 
 export function useConsent() {
   const context = useContext(ConsentContext);
 
   if (!context) {
-    throw new Error(
-      "useConsent must be used within a ConsentProvider",
-    );
+    throw new Error("useConsent must be used within a ConsentProvider");
   }
 
   return context;

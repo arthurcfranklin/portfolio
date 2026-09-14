@@ -2,60 +2,32 @@
   const root = document.documentElement;
 
   try {
-    const supportedLocales = [
-      "pt-BR",
-      "en-US",
-      "es-ES",
-      "fr-FR",
-    ];
+    const supportedLocales = ["pt-BR", "en-US", "es-ES", "fr-FR"];
 
-    const supportedThemes = [
-      "light",
-      "dark",
-      "system",
-    ];
+    const supportedThemes = ["light", "dark", "system"];
 
-    const storedLanguage = window.localStorage.getItem(
-      "portfolio-language",
-    );
+    const storedLanguage = window.localStorage.getItem("portfolio-language");
 
-    const storedTheme = window.localStorage.getItem(
-      "portfolio-theme",
-    );
+    const storedTheme = window.localStorage.getItem("portfolio-theme");
 
-    const defaultLocale =
-      root.dataset.defaultLocale || "pt-BR";
+    const defaultLocale = root.dataset.defaultLocale || "pt-BR";
 
-    const defaultTheme =
-      root.dataset.defaultTheme || "dark";
+    const defaultTheme = root.dataset.defaultTheme || "dark";
 
-    const language = supportedLocales.includes(
-      storedLanguage,
-    )
-      ? storedLanguage
-      : defaultLocale;
+    const language = supportedLocales.includes(storedLanguage) ? storedLanguage : defaultLocale;
 
-    const themePreference = supportedThemes.includes(
-      storedTheme,
-    )
-      ? storedTheme
-      : defaultTheme;
+    const themePreference = supportedThemes.includes(storedTheme) ? storedTheme : defaultTheme;
 
     const resolvedTheme =
       themePreference === "system"
-        ? window.matchMedia(
-            "(prefers-color-scheme: dark)",
-          ).matches
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
           ? "dark"
           : "light"
         : themePreference;
 
     root.lang = language;
 
-    root.classList.toggle(
-      "dark",
-      resolvedTheme === "dark",
-    );
+    root.classList.toggle("dark", resolvedTheme === "dark");
 
     root.dataset.theme = resolvedTheme;
   } catch {
