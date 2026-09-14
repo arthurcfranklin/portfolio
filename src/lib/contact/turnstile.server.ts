@@ -6,6 +6,7 @@ const TURNSTILE_TEST_SECRET_KEY = "1x0000000000000000000000000000000AA";
 
 const TURNSTILE_PRODUCTION_HOSTNAME = "arthurfranklin.com.br";
 const TURNSTILE_EXPECTED_ACTION = "contact";
+const TURNSTILE_TIMEOUT_MS = 5_000;
 
 const LOCAL_HOSTNAMES = new Set(["localhost", "127.0.0.1"]);
 
@@ -60,10 +61,14 @@ export async function verifyTurnstile({
 
   let response: Response;
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), TURNSTILE_TIMEOUT_MS);
+
   try {
     response = await fetch(TURNSTILE_SITEVERIFY_URL, {
       method: "POST",
       body,
+      signal: controller.signal,
     });
   } catch (error) {
     console.error("Turnstile Siteverify request failed.", error);
@@ -71,6 +76,8 @@ export async function verifyTurnstile({
     return {
       success: false,
     };
+  } finally {
+    clearTimeout(timeoutId);
   }
 
   if (!response.ok) {
