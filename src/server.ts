@@ -2,21 +2,45 @@ import handler, { createServerEntry } from "@tanstack/react-start/server-entry";
 
 import { renderErrorPage } from "./lib/error-page";
 
-// h3 swallows in-handler throws into a normal 500 Response with body
-// {"unhandled":true,"message":"HTTPError"} — try/catch alone never fires for those.
-async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
-  if (response.status < 500) return response;
+// Nitro serializes unhandled production SSR failures as a generic JSON 500.
+// Convert only HTML document requests to the portfolio's generic error page.
+async function normalizeCatastrophicSsrResponse(
+  request: Request,
+  response: Response,
+): Promise<Response> {
+  if (response.status !== 500) return response;
+
+  const method = request.method.toUpperCase();
+  if (method !== "GET" && method !== "HEAD") return response;
+
+  const accept = request.headers.get("accept") ?? "";
+  if (!accept.includes("text/html")) return response;
 
   const contentType = response.headers.get("content-type") ?? "";
   if (!contentType.includes("application/json")) return response;
 
-  const body = await response.clone().text();
+  let payload: unknown;
 
-  if (!body.includes('"unhandled":true') || !body.includes('"message":"HTTPError"')) {
+  try {
+    payload = await response.clone().json();
+  } catch {
     return response;
   }
 
-  console.error(new Error(`h3 swallowed SSR error: ${body}`));
+  if (
+    payload == null ||
+    typeof payload !== "object" ||
+    !("error" in payload) ||
+    !("status" in payload) ||
+    !("unhandled" in payload) ||
+    payload.error !== true ||
+    payload.status !== 500 ||
+    payload.unhandled !== true
+  ) {
+    return response;
+  }
+
+  console.error(new Error("Nitro returned an unhandled SSR error response."));
 
   return new Response(renderErrorPage(), {
     status: 500,
@@ -30,7 +54,7 @@ export default createServerEntry({
   async fetch(request) {
     try {
       const response = await handler.fetch(request);
-      return await normalizeCatastrophicSsrResponse(response);
+      return await normalizeCatastrophicSsrResponse(request, response);
     } catch (error) {
       console.error(error);
 
