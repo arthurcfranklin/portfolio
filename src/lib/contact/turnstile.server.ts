@@ -4,6 +4,9 @@ const TURNSTILE_SITEVERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0
 
 const TURNSTILE_TEST_SECRET_KEY = "1x0000000000000000000000000000000AA";
 
+const TURNSTILE_PRODUCTION_HOSTNAME = "arthurfranklin.com.br";
+const TURNSTILE_EXPECTED_ACTION = "contact";
+
 const LOCAL_HOSTNAMES = new Set(["localhost", "127.0.0.1"]);
 
 type TurnstileVerificationResponse = {
@@ -16,8 +19,7 @@ type TurnstileVerificationResponse = {
 
 type VerifyTurnstileOptions = {
   token: string;
-  expectedHostname: string;
-  expectedAction: string;
+  requestHostname: string;
 };
 
 type TurnstileVerificationResult =
@@ -30,8 +32,7 @@ type TurnstileVerificationResult =
 
 export async function verifyTurnstile({
   token,
-  expectedHostname,
-  expectedAction,
+  requestHostname,
 }: VerifyTurnstileOptions): Promise<TurnstileVerificationResult> {
   const { turnstileSecretKey } = getServerConfig();
 
@@ -45,7 +46,7 @@ export async function verifyTurnstile({
 
   const isTestSecret = turnstileSecretKey === TURNSTILE_TEST_SECRET_KEY;
 
-  if (isTestSecret && !LOCAL_HOSTNAMES.has(expectedHostname)) {
+  if (isTestSecret && !LOCAL_HOSTNAMES.has(requestHostname)) {
     console.error("Turnstile test credentials cannot be used outside local development.");
 
     return {
@@ -103,7 +104,7 @@ export async function verifyTurnstile({
   }
 
   if (!isTestSecret) {
-    if (verification.hostname !== expectedHostname) {
+    if (verification.hostname !== TURNSTILE_PRODUCTION_HOSTNAME) {
       console.warn("Turnstile hostname mismatch.");
 
       return {
@@ -111,7 +112,7 @@ export async function verifyTurnstile({
       };
     }
 
-    if (verification.action !== expectedAction) {
+    if (verification.action !== TURNSTILE_EXPECTED_ACTION) {
       console.warn("Turnstile action mismatch.");
 
       return {

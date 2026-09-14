@@ -113,8 +113,7 @@ export const Route = createFileRoute("/api/contact")({
 
         const turnstileVerification = await verifyTurnstile({
           token: validation.data.turnstileToken,
-          expectedHostname: new URL(request.url).hostname,
-          expectedAction: "contact",
+          requestHostname: new URL(request.url).hostname,
         });
 
         if (!turnstileVerification.success) {
