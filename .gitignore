@@ -22,11 +22,11 @@ dist-ssr/
 # Coverage
 coverage/
 
-# Environmen
+# Environment
 .env
 .env.*
 !.env.example
-.dev.vars
+.dev.vars*
 *.local
 
 # Wrangler / Cloudflare
