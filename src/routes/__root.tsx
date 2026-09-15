@@ -18,6 +18,7 @@ import { ConsentPreferences } from "@/components/legal/ConsentPreferences";
 import { ConsentFloatingButton } from "@/components/legal/ConsentFloatingButton";
 import { ptBR } from "@/data/locales/pt-BR";
 import { defaultLocale, defaultTheme } from "@/types/preferences";
+import { SystemPageDevPreview } from "@/components/system/SystemPageDevPreview";
 
 import appCss from "../styles.css?url";
 
@@ -191,19 +192,27 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  const content = (
+    <ConsentProvider>
+      <QueryClientProvider client={queryClient}>
+        <HashScrollRestorer />
+
+        <Outlet />
+      </QueryClientProvider>
+
+      <ConsentBanner />
+      <ConsentPreferences />
+      <ConsentFloatingButton />
+    </ConsentProvider>
+  );
+
   return (
     <PreferencesProvider>
-      <ConsentProvider>
-        <QueryClientProvider client={queryClient}>
-          <HashScrollRestorer />
-
-          <Outlet />
-        </QueryClientProvider>
-
-        <ConsentBanner />
-        <ConsentPreferences />
-        <ConsentFloatingButton />
-      </ConsentProvider>
+      {import.meta.env.DEV ? (
+        <SystemPageDevPreview>{content}</SystemPageDevPreview>
+      ) : (
+        content
+      )}
     </PreferencesProvider>
   );
 }
