@@ -155,13 +155,13 @@ export const ptBR = {
         name: "ForgeDocs",
         tag: "Suíte Desktop",
         description:
-          "Suíte desktop para processamento de documentos com foco em privacidade, desempenho e produtividade em ambiente 100% local.",
+          "Suíte desktop para processamento de documentos com foco em privacidade, desempenho e operação local.",
       },
       libraryflow: {
         name: "LibraryFlow",
         tag: "Gestão de Bibliotecas",
         description:
-          "Sistema web para gestão de bibliotecas, desenvolvido para simplificar o controle de acervos, empréstimos e devoluções.",
+          "Sistema web para gestão de bibliotecas, desenvolvido com foco em arquitetura, persistência de dados e evolução contínua.",
       },
       atlas: {
         name: "Atlas",

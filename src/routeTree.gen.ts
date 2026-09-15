@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as ForgedocsRouteImport } from './routes/forgedocs'
+import { Route as LibraryflowRouteImport } from './routes/libraryflow'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
@@ -23,6 +25,16 @@ const IndexRoute = IndexRouteImport.update({
 const CookiesRoute = CookiesRouteImport.update({
   id: '/cookies',
   path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForgedocsRoute = ForgedocsRouteImport.update({
+  id: '/forgedocs',
+  path: '/forgedocs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibraryflowRoute = LibraryflowRouteImport.update({
+  id: '/libraryflow',
+  path: '/libraryflow',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -44,6 +56,8 @@ const ApiContactRoute = ApiContactRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cookies': typeof CookiesRoute
+  '/forgedocs': typeof ForgedocsRoute
+  '/libraryflow': typeof LibraryflowRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/api/contact': typeof ApiContactRoute
@@ -51,6 +65,8 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cookies': typeof CookiesRoute
+  '/forgedocs': typeof ForgedocsRoute
+  '/libraryflow': typeof LibraryflowRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/api/contact': typeof ApiContactRoute
@@ -59,21 +75,47 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cookies': typeof CookiesRoute
+  '/forgedocs': typeof ForgedocsRoute
+  '/libraryflow': typeof LibraryflowRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/api/contact': typeof ApiContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cookies' | '/privacy' | '/terms' | '/api/contact'
+  fullPaths:
+    | '/'
+    | '/cookies'
+    | '/forgedocs'
+    | '/libraryflow'
+    | '/privacy'
+    | '/terms'
+    | '/api/contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cookies' | '/privacy' | '/terms' | '/api/contact'
-  id: '__root__' | '/' | '/cookies' | '/privacy' | '/terms' | '/api/contact'
+  to:
+    | '/'
+    | '/cookies'
+    | '/forgedocs'
+    | '/libraryflow'
+    | '/privacy'
+    | '/terms'
+    | '/api/contact'
+  id:
+    | '__root__'
+    | '/'
+    | '/cookies'
+    | '/forgedocs'
+    | '/libraryflow'
+    | '/privacy'
+    | '/terms'
+    | '/api/contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CookiesRoute: typeof CookiesRoute
+  ForgedocsRoute: typeof ForgedocsRoute
+  LibraryflowRoute: typeof LibraryflowRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
   ApiContactRoute: typeof ApiContactRoute
@@ -93,6 +135,20 @@ declare module '@tanstack/react-router' {
       path: '/cookies'
       fullPath: '/cookies'
       preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forgedocs': {
+      id: '/forgedocs'
+      path: '/forgedocs'
+      fullPath: '/forgedocs'
+      preLoaderRoute: typeof ForgedocsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/libraryflow': {
+      id: '/libraryflow'
+      path: '/libraryflow'
+      fullPath: '/libraryflow'
+      preLoaderRoute: typeof LibraryflowRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -122,6 +178,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CookiesRoute: CookiesRoute,
+  ForgedocsRoute: ForgedocsRoute,
+  LibraryflowRoute: LibraryflowRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
   ApiContactRoute: ApiContactRoute,

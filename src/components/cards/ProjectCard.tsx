@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 type ProjectCardProps = {
@@ -23,8 +23,6 @@ export function ProjectCard({
   return (
     <a
       href={url}
-      target="_blank"
-      rel="noopener noreferrer"
       className="card-pro card-pro-hover group flex cursor-pointer flex-col p-7"
     >
       <div className="flex items-center justify-between">
@@ -37,7 +35,9 @@ export function ProjectCard({
 
       <h3 className="mt-6 text-2xl font-bold tracking-tight">{name}</h3>
 
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{description}</p>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+        {description}
+      </p>
 
       <div className="mt-6 flex flex-wrap gap-2">
         {tech.map((technology) => (
@@ -48,7 +48,6 @@ export function ProjectCard({
       </div>
 
       <span className="mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-accent/30 bg-accent/5 text-sm font-medium text-accent transition-colors group-hover:bg-accent/15">
-        <Github className="h-4 w-4" />
         {actionLabel}
         <ArrowUpRight className="h-4 w-4" />
       </span>
