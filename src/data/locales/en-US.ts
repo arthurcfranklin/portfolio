@@ -188,6 +188,12 @@ export const enUS = {
         description:
           "Personal workspace for organizing tasks and projects, designed with a focus on productivity, fluidity, and user experience.",
       },
+      deskly: {
+        name: "Deskly",
+        tag: "IT Ticketing System",
+        description:
+          "IT ticketing system designed to organize support requests and track their progress.",
+      },
     },
   },
 

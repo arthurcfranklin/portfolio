@@ -14,6 +14,7 @@ import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ForgedocsRouteImport } from './routes/forgedocs'
 import { Route as LibraryflowRouteImport } from './routes/libraryflow'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
@@ -42,6 +43,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/forgedocs': typeof ForgedocsRoute
   '/libraryflow': typeof LibraryflowRoute
   '/privacy': typeof PrivacyRoute
+  '/projects': typeof ProjectsRoute
   '/terms': typeof TermsRoute
   '/api/contact': typeof ApiContactRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/forgedocs': typeof ForgedocsRoute
   '/libraryflow': typeof LibraryflowRoute
   '/privacy': typeof PrivacyRoute
+  '/projects': typeof ProjectsRoute
   '/terms': typeof TermsRoute
   '/api/contact': typeof ApiContactRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/forgedocs': typeof ForgedocsRoute
   '/libraryflow': typeof LibraryflowRoute
   '/privacy': typeof PrivacyRoute
+  '/projects': typeof ProjectsRoute
   '/terms': typeof TermsRoute
   '/api/contact': typeof ApiContactRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/forgedocs'
     | '/libraryflow'
     | '/privacy'
+    | '/projects'
     | '/terms'
     | '/api/contact'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/forgedocs'
     | '/libraryflow'
     | '/privacy'
+    | '/projects'
     | '/terms'
     | '/api/contact'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/forgedocs'
     | '/libraryflow'
     | '/privacy'
+    | '/projects'
     | '/terms'
     | '/api/contact'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   ForgedocsRoute: typeof ForgedocsRoute
   LibraryflowRoute: typeof LibraryflowRoute
   PrivacyRoute: typeof PrivacyRoute
+  ProjectsRoute: typeof ProjectsRoute
   TermsRoute: typeof TermsRoute
   ApiContactRoute: typeof ApiContactRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   ForgedocsRoute: ForgedocsRoute,
   LibraryflowRoute: LibraryflowRoute,
   PrivacyRoute: PrivacyRoute,
+  ProjectsRoute: ProjectsRoute,
   TermsRoute: TermsRoute,
   ApiContactRoute: ApiContactRoute,
 }

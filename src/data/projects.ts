@@ -1,8 +1,14 @@
-import { BookOpen, FileText, LayoutDashboard } from "lucide-react";
+import { BookOpen, FileText, TicketCheck } from "lucide-react";
 
 import type { ProjectModel } from "@/types/models";
 
 export const projects: ProjectModel[] = [
+  {
+    id: "deskly",
+    tech: ["React", "TypeScript"],
+    icon: TicketCheck,
+    url: "/deskly",
+  },
   {
     id: "forgedocs",
     tech: ["Python", "CustomTkinter", "Git", "GitHub"],
@@ -14,11 +20,5 @@ export const projects: ProjectModel[] = [
     tech: ["Python", "FastAPI", "SQLite", "HTML", "CSS", "JavaScript", "Git", "GitHub"],
     icon: BookOpen,
     url: "/libraryflow",
-  },
-  {
-    id: "atlas",
-    tech: ["React", "TypeScript", "TanStack", "Tailwind CSS", "Motion", "Git", "GitHub"],
-    icon: LayoutDashboard,
-    url: "/atlas",
   },
 ];

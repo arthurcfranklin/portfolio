@@ -169,6 +169,12 @@ export const ptBR = {
         description:
           "Workspace pessoal para organização de tarefas e projetos, desenvolvido com foco em produtividade, fluidez e experiência de uso.",
       },
+      deskly: {
+        name: "Deskly",
+        tag: "Sistema de Chamados",
+        description:
+          "Sistema de chamados de TI desenvolvido para organizar solicitações de suporte e acompanhar seu atendimento.",
+      },
     },
   },
 

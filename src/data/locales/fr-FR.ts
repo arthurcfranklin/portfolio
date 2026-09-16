@@ -198,29 +198,30 @@ export const frFR: PortfolioLocale = {
     items: {
       forgedocs: {
         name: "ForgeDocs",
-
         tag: "Suite bureautique",
-
         description:
           "Suite bureautique dédiée au traitement de documents, conçue pour offrir confidentialité, performances et productivité dans un environnement 100 % local.",
       },
 
       libraryflow: {
         name: "LibraryFlow",
-
         tag: "Gestion de Bibliothèque",
-
         description:
           "Application web de gestion de bibliothèque conçue pour simplifier le suivi des collections, des emprunts et des retours.",
       },
 
       atlas: {
         name: "Atlas",
-
         tag: "Productivité et Organisation",
-
         description:
           "Espace de travail personnel pour organiser les tâches et les projets, développé autour de la productivité, de la fluidité et de l’expérience utilisateur.",
+      },
+
+      deskly: {
+        name: "Deskly",
+        tag: "Système de Tickets Informatiques",
+        description:
+          "Système de tickets informatiques conçu pour organiser les demandes de support et suivre leur traitement.",
       },
     },
   },

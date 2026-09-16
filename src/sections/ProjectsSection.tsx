@@ -1,5 +1,3 @@
-import { Github } from "lucide-react";
-
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionLabel } from "@/components/shared/SectionLabel";
@@ -27,13 +25,7 @@ export function ProjectsSection() {
               </h2>
             </div>
 
-            <a
-              href="https://arthurfranklin.com.br/github"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              <Github className="h-4 w-4" />
+            <a href="/projects" className="btn-secondary">
               {locale.projects.viewAllButton}
             </a>
           </div>
