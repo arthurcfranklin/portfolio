@@ -294,6 +294,7 @@ export const ptBR = {
     title: "Política de Privacidade",
     lastUpdatedLabel: "Última atualização",
     lastUpdated: "12 de setembro de 2026",
+    tableOfContentsLabel: "Nesta página",
 
     introduction: [
       "Esta Política de Privacidade explica como os dados pessoais podem ser tratados durante a utilização do site arthurfranklin.com.br, especialmente por meio do formulário de contato.",
@@ -392,6 +393,7 @@ export const ptBR = {
     title: "Termos de Uso",
     lastUpdatedLabel: "Última atualização",
     lastUpdated: "13 de setembro de 2026",
+    tableOfContentsLabel: "Nesta página",
 
     introduction: [
       "Estes Termos de Uso estabelecem as condições aplicáveis ao acesso e à utilização de arthurfranklin.com.br e de seus conteúdos.",
@@ -497,6 +499,7 @@ export const ptBR = {
     title: "Política de Cookies",
     lastUpdatedLabel: "Última atualização",
     lastUpdated: "13 de setembro de 2026",
+    tableOfContentsLabel: "Nesta página",
 
     introduction: [
       "Esta Política de Cookies explica como o site arthurfranklin.com.br utiliza cookies, armazenamento local e tecnologias semelhantes para funcionamento, preferências e segurança.",

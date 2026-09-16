@@ -323,6 +323,7 @@ export const enUS = {
     title: "Privacy Policy",
     lastUpdatedLabel: "Last updated",
     lastUpdated: "September 12, 2026",
+    tableOfContentsLabel: "On this page",
 
     introduction: [
       "This Privacy Policy explains how personal data may be processed when using arthurfranklin.com.br, especially through the contact form.",
@@ -421,6 +422,7 @@ export const enUS = {
     title: "Terms of Use",
     lastUpdatedLabel: "Last updated",
     lastUpdated: "September 13, 2026",
+    tableOfContentsLabel: "On this page",
 
     introduction: [
       "These Terms of Use establish the conditions applicable to accessing and using arthurfranklin.com.br and its content.",
@@ -530,6 +532,7 @@ export const enUS = {
     title: "Cookie Policy",
     lastUpdatedLabel: "Last updated",
     lastUpdated: "September 13, 2026",
+    tableOfContentsLabel: "On this page",
 
     introduction: [
       "This Cookie Policy explains how arthurfranklin.com.br uses cookies, local storage, and similar technologies for functionality, preferences, and security.",

@@ -357,6 +357,7 @@ export const frFR: PortfolioLocale = {
     title: "Politique de confidentialité",
     lastUpdatedLabel: "Dernière mise à jour",
     lastUpdated: "12 septembre 2026",
+    tableOfContentsLabel: "Sur cette page",
 
     introduction: [
       "La présente Politique de confidentialité explique comment les données personnelles peuvent être traitées lors de l'utilisation de arthurfranklin.com.br, notamment au moyen du formulaire de contact.",
@@ -455,6 +456,7 @@ export const frFR: PortfolioLocale = {
     title: "Conditions d'utilisation",
     lastUpdatedLabel: "Dernière mise à jour",
     lastUpdated: "13 septembre 2026",
+    tableOfContentsLabel: "Sur cette page",
 
     introduction: [
       "Les présentes Conditions d'utilisation définissent les conditions applicables à l'accès et à l'utilisation de arthurfranklin.com.br et de son contenu.",
@@ -571,6 +573,7 @@ export const frFR: PortfolioLocale = {
     title: "Politique relative aux cookies",
     lastUpdatedLabel: "Dernière mise à jour",
     lastUpdated: "13 septembre 2026",
+    tableOfContentsLabel: "Sur cette page",
 
     introduction: [
       "La présente Politique relative aux cookies explique comment arthurfranklin.com.br utilise les cookies, le stockage local et des technologies similaires à des fins de fonctionnement, de préférences et de sécurité.",

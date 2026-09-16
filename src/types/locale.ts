@@ -198,24 +198,19 @@ export type LegalSectionLocale = {
   paragraphs?: string[];
   items?: string[];
 };
-
-export type PrivacyLocale = {
+export type LegalPageLocale = {
   eyebrow: string;
   title: string;
   lastUpdatedLabel: string;
   lastUpdated: string;
+  tableOfContentsLabel: string;
   introduction: string[];
   sections: LegalSectionLocale[];
 };
 
-export type TermsLocale = {
-  eyebrow: string;
-  title: string;
-  lastUpdatedLabel: string;
-  lastUpdated: string;
-  introduction: string[];
-  sections: LegalSectionLocale[];
-};
+export type PrivacyLocale = LegalPageLocale;
+
+export type TermsLocale = LegalPageLocale;
 
 export type ConsentLocale = {
   banner: {
@@ -250,11 +245,4 @@ export type ConsentLocale = {
   };
 };
 
-export type CookiesLocale = {
-  eyebrow: string;
-  title: string;
-  lastUpdatedLabel: string;
-  lastUpdated: string;
-  introduction: string[];
-  sections: LegalSectionLocale[];
-};
+export type CookiesLocale = LegalPageLocale;
